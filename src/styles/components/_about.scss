@@ -1,0 +1,252 @@
+.about {
+  color: $color-white;
+  height: 300vh;
+  font-size: 2rem;
+  font-family: "Saira", sans-serif;
+  position: relative;
+  overflow: hidden;
+  .curvy-line {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    display: inline-block;
+    .line1 {
+      width: 10rem;
+      height: 2px;
+      background-color: $color-green-light;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -5px;
+        width: 1rem;
+        height: 1rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px 5px $color-green-light-2;
+      }
+    }
+    .line2 {
+      height: 36rem;
+      width: 2px;
+      background-color: $color-green-light;
+      border-radius: 50%/100px 100px 0 0;
+    }
+
+    .line3 {
+      width: 64.1rem;
+      height: 2px;
+      background-color: $color-green-light;
+      border-radius: 50%/100px 100px 0 0;
+    }
+    .line4 {
+      position: absolute;
+      left: 99.7%;
+      height: 15rem;
+      width: 2px;
+      background-color: $color-green-light;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -5px;
+        bottom: -5px;
+        width: 1rem;
+        height: 1rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        box-shadow: 0 0 5px 5px $color-green-light-2;
+      }
+    }
+  }
+  &__container {
+    width: 82%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, max-content));
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-family: mainFont;
+    font-size: 15rem;
+    letter-spacing: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-top: 2rem;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .scewed-tag {
+      font-size: 25rem;
+      font-weight: 700;
+      color: $color-green-matt;
+      font-weight: 700;
+      letter-spacing: 3px;
+      transform: rotate(-52deg) skew(20deg, 7deg);
+      display: inline-block;
+      opacity: 0.6;
+      z-index: -5;
+      position: absolute;
+    }
+    .outer-circle {
+      width: 22rem;
+      height: 22rem;
+      border: 1px solid $color-white;
+      border-radius: 50%;
+      background: none;
+      position: relative;
+      cursor: pointer;
+
+      .inner-circle {
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 10;
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // transform: scale(0);
+        position: relative;
+      }
+      &:hover .inner-circle {
+        // transform: scale(1);
+        width: 22rem;
+        height: 22rem;
+        background-color: $color-green-light-2;
+      }
+      &:hover .green-text.z-top {
+        color: $color-white;
+      }
+      .circle1 {
+        position: absolute;
+        width: calc(100% + 10rem);
+        height: calc(100% + 10rem);
+        border: 1px solid $color-white;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-radius: 50%;
+        left: -5rem;
+        top: -5rem;
+        animation-name: rotating-circles-one;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1.2rem;
+          height: 1.2rem;
+          border-radius: 50%;
+          background-color: $color-white;
+          left: 4.5rem;
+          top: 26.8rem;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1.2rem;
+          height: 1.2rem;
+          border-radius: 50%;
+          background-color: $color-white;
+          left: 4.5rem;
+          top: 3.8rem;
+        }
+      }
+      .circle2 {
+        position: absolute;
+        width: calc(100% + 7rem);
+        height: calc(100% + 7rem);
+        border: 1px solid $color-white;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-radius: 50%;
+        left: -3.5rem;
+        top: -3.5rem;
+        animation-name: rotating-circles-one;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1.2rem;
+          height: 1.2rem;
+          border-radius: 50%;
+          background-color: $color-white;
+          left: 23.5rem;
+          top: 3.2rem;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1.2rem;
+          height: 1.2rem;
+          border-radius: 50%;
+          background-color: $color-white;
+          left: 24.3rem;
+          top: 23.5rem;
+        }
+      }
+      .circle3 {
+        animation-name: rotating-circles-one;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: absolute;
+        width: calc(100% + 4rem);
+        height: calc(100% + 4rem);
+        border: 1px solid $color-white;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-radius: 50%;
+        left: -2rem;
+        top: -2rem;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1.2rem;
+          height: 1.2rem;
+          border-radius: 50%;
+          background-color: $color-white;
+          left: 21.4rem;
+          top: 21rem;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1.2rem;
+          height: 1.2rem;
+          border-radius: 50%;
+          background-color: $color-white;
+          left: 3.3rem;
+          top: 3rem;
+        }
+      }
+    }
+  }
+}
+
+.tags {
+  font-family: "Saira", sans-serif;
+  color: $color-gray;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+  font-weight: 300;
+}
