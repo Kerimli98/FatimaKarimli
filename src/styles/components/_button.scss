@@ -54,3 +54,13 @@ button {
     }
   }
 }
+
+
+@media screen and (max-width: 524px) {
+    button {
+        padding: 0.8rem 1.2rem;
+        font-size: 1.5rem;
+
+      }
+      
+}

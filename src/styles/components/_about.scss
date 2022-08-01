@@ -65,6 +65,7 @@
     width: 82%;
     margin: 0 auto;
     display: grid;
+    gap: 8rem;
     grid-template-columns: repeat(auto-fit, minmax(50rem, max-content));
   }
   &__left {
@@ -249,4 +250,41 @@
   letter-spacing: 1.5px;
   font-size: 2rem;
   font-weight: 300;
+}
+
+@media screen and (max-width: 1000px) {
+  .about {
+    .curvy-line {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    &__container {
+      width: 85%;
+      gap: 10rem;
+    }
+
+    &__name {
+      font-size: 10rem;
+    }
+    &__right {
+      justify-content: flex-start;
+      .outer-circle {
+        margin-left: 8rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 524px) {
+  .about {
+    &__container {
+      width: 92%;
+    }
+    &__name {
+      font-size: 6rem;
+    }
+  }
 }

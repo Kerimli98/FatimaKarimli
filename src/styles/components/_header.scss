@@ -24,3 +24,20 @@
     color: $color-white;
   }
 }
+
+@media screen and (max-width: 524px) {
+
+      .navbar {
+        // background-color: red;
+        height: 10vh;
+        width: 95%;
+        justify-content: space-around;
+
+      
+        &__logo {
+          font-size: 3.5rem;
+          font-weight: 600;
+   
+        }
+      }
+}
