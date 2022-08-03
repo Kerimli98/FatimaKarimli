@@ -124,7 +124,7 @@ const projects = [
   {
     id: "12",
     title: "Youtube App",
-    websitelink: "eazypizz.netlify.app",
+    websitelink: "https://youtube-go.netlify.app/g",
     languages: ["React", "SASS/SCSS", "HTML"],
     desc: "Portfolio Project for myself, as a front end developer, I tried to make my portfolio look more creative as well as interactive",
     goal: "",
@@ -152,7 +152,7 @@ const projects = [
     goal: "",
     challanges: "",
     solution: "",
-    screenshots: "",
+    screenshots: "/assets/images/selnet.png",
   },
 ];
 export default projects;
