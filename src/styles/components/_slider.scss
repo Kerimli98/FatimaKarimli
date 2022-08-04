@@ -20,22 +20,19 @@
   .slick-arrow.slick-prev,
   .slick-arrow.slick-next {
     background: none;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 20001;
   }
-  .slick-slide {
-    padding: 15px;
-  }
   .slick-prev {
-    left: 2rem !important;
+    left: 14rem !important;
   }
   .slider-arrow {
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     border: 1px solid $color-gray;
     font-size: 1.6rem;
@@ -46,15 +43,16 @@
     justify-content: center;
     transition: all 0.4s ease;
     position: absolute;
-    bottom: -38rem;
+    bottom: -34.5rem;
 
     &:hover {
       color: $color-green-light;
       transform: scale(1.5);
     }
   }
+
   .slick-next {
-    right: 2rem !important;
+    right: 14rem !important;
   }
   .slick-prev::before,
   .slick-next::before {
@@ -62,10 +60,10 @@
   }
   .project-slide {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(48rem, 50%));
     align-items: center;
-    gap: 4rem;
-    padding: 5rem 0 5rem 5rem;
+    justify-items: center;
+    padding: 5rem 0;
     outline: none;
     overflow: hidden;
     .img-container {
@@ -104,7 +102,6 @@
           border-radius: 50%;
           object-fit: cover;
           height: 100%;
-          
         }
       }
 
@@ -123,11 +120,12 @@
 
     .slide-content {
       color: $color-white;
-
+      margin-left: 4rem;
       .slide-title {
         font-family: mainFont;
         color: $color-green-light;
         font-size: 5rem;
+        letter-spacing: 2px;
         font-weight: 400;
         cursor: pointer;
       }
@@ -151,7 +149,7 @@ input[type="range"] {
   height: 0.8rem;
   display: flex;
   width: 60%;
-  margin-top: 8rem;
+  margin-top: 6rem;
   align-self: center;
   margin-bottom: 5rem;
 }
@@ -165,6 +163,38 @@ input[type="range"] {
   align-self: center;
 }
 
+@media screen and (max-width: 1268px) {
+  .project-slider {
+    .project-slide {
+      padding: 4rem;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .img-container {
+        width: 40rem;
+        height: 40rem;
+      }
+      .slide-content {
+        text-align: center;
+        margin-top: 5rem;
+        .slide-title {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .project-slider {
+    .slick-prev {
+      left: 0 !important;
+    }
+    .slick-next {
+      right: 0 !important;
+    }
+  }
+}
 @media screen and (max-width: 580px) {
   .project-slider {
     width: 92%;
@@ -180,22 +210,20 @@ input[type="range"] {
       }
     }
     .project-slide {
-      padding: 0;
+      padding: 2rem 0;
       .img-container {
         width: 30rem;
         height: 30rem;
-        margin: 0 auto;
-      }
-      .slide-content {
-        margin: 0 auto;
-        .slide-title {
-          text-align: center;
-        }
-        .slide-desc {
-          text-align: center;
-        }
       }
     }
   }
+}
 
+@media screen and (max-width: 400px) {
+  .project-slider {
+    &__heading {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
 }
