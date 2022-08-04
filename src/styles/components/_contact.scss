@@ -205,84 +205,74 @@
   }
 }
 @media screen and (max-width: 480px) {
-    .contact {
-  
-        &__heading {
-          font-size: 3rem;
-          letter-spacing: 3px;
-        }
-        .contacts {
-          width: 92%;
-          margin-top: 4rem;
-     
-          .contact-circle {
-     
-            cursor: pointer;
-            .outer-circle {
-              font-size: 1.5rem;
-            }
+  .contact {
+    &__heading {
+      font-size: 3rem;
+      letter-spacing: 3px;
+    }
+    .contacts {
+      width: 92%;
+      margin-top: 4rem;
 
-            &.linkedin {
-              width: 12rem;
-              height: 12rem;
-            
-            }
-            &.github {
-              width: 12rem;
-              height: 12rem;
-            
-            }
-            &.gmail {
-              width: 12rem;
-              height: 12rem              
-            }
-            &.instagram {
-              width: 12rem;
-              height: 12rem;
-            
-            }
-          }
+      .contact-circle {
+        cursor: pointer;
+        .outer-circle {
+          font-size: 1.5rem;
+        }
+
+        &.linkedin {
+          width: 12rem;
+          height: 12rem;
+        }
+        &.github {
+          width: 12rem;
+          height: 12rem;
+        }
+        &.gmail {
+          width: 12rem;
+          height: 12rem;
+        }
+        &.instagram {
+          width: 12rem;
+          height: 12rem;
         }
       }
+    }
+  }
 }
 @media screen and (max-width: 319px) {
-    .contact {
-  
-        &__heading {
-          font-size: 2rem;
-          letter-spacing: 3px;
-        }
-        .contacts {
-          width: 95%;
-          margin-top: 3rem;
-     
-          .contact-circle {
-     
-            cursor: pointer;
-            .outer-circle {
-              font-size: 1.3rem;
-            }
+  .contact {
+    &__heading {
+      font-size: 2rem;
+      letter-spacing: 3px;
+    }
+    .contacts {
+      width: 95%;
+      margin-top: 3rem;
 
-            &.linkedin {
-              width: 10rem;
-              height: 10rem;
-            
-            }
-            &.github {
-              width: 10rem;
-              height: 10rem;
-            
-            }
-            &.gmail {
-              width: 10rem;
-              height: 10rem              
-            }
-            &.instagram {
-              width: 10rem;
-              height: 10rem;
-            
-            }
-          }
+      .contact-circle {
+        cursor: pointer;
+        .outer-circle {
+          font-size: 1.3rem;
+        }
+
+        &.linkedin {
+          width: 10rem;
+          height: 10rem;
+        }
+        &.github {
+          width: 10rem;
+          height: 10rem;
+        }
+        &.gmail {
+          width: 10rem;
+          height: 10rem;
+        }
+        &.instagram {
+          width: 10rem;
+          height: 10rem;
         }
       }
+    }
+  }
 }
