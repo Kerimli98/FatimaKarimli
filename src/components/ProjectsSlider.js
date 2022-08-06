@@ -77,14 +77,9 @@ const ProjectsSlider = () => {
             </Link>
 
             <div className="slide-content">
-              <a
-                href={item.itemRoute}
-                rel="noreferrer"
-                target="_blank"
-                className="slide-title"
-              >
+              <Link to={`/projects/${item.title}`} className="slide-title">
                 {item.title}
-              </a>
+              </Link>
               <p className="slide-desc">{item.desc}</p>
             </div>
           </div>
