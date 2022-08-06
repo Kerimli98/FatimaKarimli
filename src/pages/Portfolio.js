@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import projects from "../data";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const [category, setCategory] = useState("ALL");
