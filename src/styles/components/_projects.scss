@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 4rem;
-    font-family: 'Saira', sans-serif;
+    font-family: "Saira", sans-serif;
     .filter-btn {
       border: 1px solid $color-green-matt;
       color: $color-green-matt;
@@ -186,13 +186,17 @@
     }
   }
 }
-@media  (max-width:768px) {
-    .projects-page{
-        .projects{
-            .project-border{
-                .project{}
-            }
+@media (max-width: 768px) {
+  .projects-page {
+    .projects {
+      .project-border {
+        transition: all 0.3s ease;
+        &.clicked {
+          background-color: $color-green-light-2;
         }
+        .project {
+        }
+      }
     }
-    
+  }
 }

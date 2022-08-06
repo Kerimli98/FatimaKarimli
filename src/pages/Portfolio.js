@@ -47,7 +47,11 @@ const Portfolio = () => {
       setAllProjects(filteredProjects);
     }
   }, [category]);
-
+  const [clicked, setClicked] = useState(false);
+  const [itemId, setItemId] = useState(0);
+  console.log(itemId);
+  console.log(clicked);
+  useEffect(() => {}, [itemId]);
   return (
     <div className="projects-page">
       <h3>My Works</h3>
@@ -100,21 +104,31 @@ const Portfolio = () => {
       </div>
       <div className="projects">
         {allProjects.map((item) => (
-          <div className="project-border" key={item.id}>
-            <div
-              className="project"
-         
-            >
+          <div
+            className={
+              item.id === itemId && window.innerWidth < 768
+                ? "project-border clicked"
+                : "project-border "
+            }
+            onClick={() => {
+              setItemId(item.id);
+              if (item.id === itemId) {
+                console.log("oki");
+              }
+            }}
+            key={item.id}
+          >
+            <div className="project">
               <div className="overlay"></div>
               <img className="project__img" src={item.screenshots} alt="" />
-        
+
               <div className={"project-content"}>
                 <p className="project__title">{item.title}</p>
-                {/* <Link to={`/projects/${item.title}`}>
-                  <div className="project__btn">
-                    View Project <i className="fa-solid fa-angle-right"></i>
-                  </div>
-                </Link> */}
+                {/* <Link to={`/projects/${item.title}`}> */}
+                <div className="project__btn">
+                  View Project <i className="fa-solid fa-angle-right"></i>
+                </div>
+                {/* </Link> */}
               </div>
             </div>
           </div>
