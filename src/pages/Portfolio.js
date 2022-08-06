@@ -47,10 +47,8 @@ const Portfolio = () => {
       setAllProjects(filteredProjects);
     }
   }, [category]);
-  //   const [clicked, setClicked] = useState(false);
   const [itemId, setItemId] = useState(0);
   console.log(itemId);
-  //   console.log(clicked);
   useEffect(() => {}, [itemId]);
   return (
     <div className="projects-page">
@@ -112,9 +110,6 @@ const Portfolio = () => {
             }
             onClick={() => {
               setItemId(item.id);
-              //   if (item.id === itemId) {
-              //     console.log("oki");
-              //   }
             }}
             key={item.id}
           >
@@ -131,9 +126,9 @@ const Portfolio = () => {
               <div className={"project-content"}>
                 <p className="project__title">{item.title}</p>
                 <Link to={`/projects/${item.title}`}>
-                <div className="project__btn">
-                  View Project <i className="fa-solid fa-angle-right"></i>
-                </div>
+                  <div className="project__btn">
+                    View Project <i className="fa-solid fa-angle-right"></i>
+                  </div>
                 </Link>
               </div>
             </div>

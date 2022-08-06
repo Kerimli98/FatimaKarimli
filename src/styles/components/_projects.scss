@@ -54,7 +54,6 @@
   .projects {
     display: grid;
     align-items: center;
-    // justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(40rem, max-content));
     gap: 5rem;
     margin-top: 5rem;
@@ -121,7 +120,6 @@
           height: 100%;
           width: 100%;
           opacity: 0;
-          visibility: hidden;
           transition: all 0.3s ease;
         }
         .project-content * {
@@ -130,7 +128,6 @@
           opacity: 0;
         }
         &:hover .project-content {
-          visibility: visible;
           opacity: 1;
         }
         &:hover .project-content * {
@@ -188,6 +185,13 @@
     }
   }
 }
+@media (max-width: 830px) {
+  .projects-page {
+    .projects {
+      justify-content: center;
+    }
+  }
+}
 @media (max-width: 768px) {
   .projects-page {
     .projects {
@@ -198,15 +202,43 @@
           background-color: $color-green-light-2;
         }
         .project {
-          visibility: hidden;
-          &.clicked .project-content {
-            opacity: 1;
-            visibility: visible;
+          .project-content {
+            visibility: hidden;
           }
-          &.clicked .project-content * {
-            opacity: 1;
-            transform: translateY(0);
+          &.clicked {
+            .project-content {
+              visibility: visible;
+              opacity: 1;
+            }
+            .project-content * {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
+          &__title {
+            font-size: 2rem;
+          }
+          &__btn {
+            font-size: 2rem;
+
+            i {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .projects-page {
+    .projects {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
+      gap: 3rem;
+      .project-border {
+        .project {
+          height: 20rem;
         }
       }
     }
