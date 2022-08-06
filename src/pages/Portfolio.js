@@ -101,18 +101,20 @@ const Portfolio = () => {
       <div className="projects">
         {allProjects.map((item) => (
           <div className="project-border" key={item.id}>
-            <div className="project">
+            <div
+              className="project"
+         
+            >
               <div className="overlay"></div>
               <img className="project__img" src={item.screenshots} alt="" />
-
-              <div className="project-content">
+        
+              <div className={"project-content"}>
                 <p className="project__title">{item.title}</p>
-
-                <Link to={`/projects/${item.title}`}>
+                {/* <Link to={`/projects/${item.title}`}>
                   <div className="project__btn">
-                    View Project <i class="fa-solid fa-angle-right"></i>
+                    View Project <i className="fa-solid fa-angle-right"></i>
                   </div>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
