@@ -195,6 +195,14 @@
           background-color: $color-green-light-2;
         }
         .project {
+            &.clicked .project-content {
+                opacity: 1;
+              }
+              &.clicked .project-content * {
+                opacity: 1;
+                transform: translateY(0);
+              }
+      
         }
       }
     }

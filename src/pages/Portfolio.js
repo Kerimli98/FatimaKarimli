@@ -47,10 +47,10 @@ const Portfolio = () => {
       setAllProjects(filteredProjects);
     }
   }, [category]);
-//   const [clicked, setClicked] = useState(false);
+  //   const [clicked, setClicked] = useState(false);
   const [itemId, setItemId] = useState(0);
   console.log(itemId);
-//   console.log(clicked);
+  //   console.log(clicked);
   useEffect(() => {}, [itemId]);
   return (
     <div className="projects-page">
@@ -112,13 +112,19 @@ const Portfolio = () => {
             }
             onClick={() => {
               setItemId(item.id);
-              if (item.id === itemId) {
-                console.log("oki");
-              }
+              //   if (item.id === itemId) {
+              //     console.log("oki");
+              //   }
             }}
             key={item.id}
           >
-            <div className="project">
+            <div
+              className={
+                item.id === itemId && window.innerWidth < 768
+                  ? "project clicked"
+                  : "project"
+              }
+            >
               <div className="overlay"></div>
               <img className="project__img" src={item.screenshots} alt="" />
 
