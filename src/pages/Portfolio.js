@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import projects from "../data";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const [category, setCategory] = useState("ALL");
@@ -130,11 +130,11 @@ const Portfolio = () => {
 
               <div className={"project-content"}>
                 <p className="project__title">{item.title}</p>
-                {/* <Link to={`/projects/${item.title}`}> */}
+                <Link to={`/projects/${item.title}`}>
                 <div className="project__btn">
                   View Project <i className="fa-solid fa-angle-right"></i>
                 </div>
-                {/* </Link> */}
+                </Link>
               </div>
             </div>
           </div>
