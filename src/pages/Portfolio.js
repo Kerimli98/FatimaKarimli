@@ -47,10 +47,10 @@ const Portfolio = () => {
       setAllProjects(filteredProjects);
     }
   }, [category]);
-  const [clicked, setClicked] = useState(false);
+//   const [clicked, setClicked] = useState(false);
   const [itemId, setItemId] = useState(0);
   console.log(itemId);
-  console.log(clicked);
+//   console.log(clicked);
   useEffect(() => {}, [itemId]);
   return (
     <div className="projects-page">
