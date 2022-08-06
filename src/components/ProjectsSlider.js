@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -58,7 +60,8 @@ const ProjectsSlider = () => {
       <Slider {...settings} ref={sliderRef}>
         {projects.map((item) => (
           <div key={item.id} className="project-slide">
-            <a href={item.websitelink} rel='noreferrer' target="_blank" 
+            <Link
+              to={`projects/${item.itemRoute}`}
               className="img-container"
               onMouseEnter={() => setAnimated(() => true)}
               onAnimationEnd={() => setAnimated(() => false)}
@@ -71,10 +74,17 @@ const ProjectsSlider = () => {
               <div className={animated ? " circle animated2" : ""}></div>
               <div className={animated ? "circle animated3" : ""}></div>
               <div className={animated ? "circle animated4" : ""}></div>
-            </a>
+            </Link>
 
             <div className="slide-content">
-              <a href={item.websitelink} rel='noreferrer' target="_blank" className="slide-title">{item.title}</a>
+              <a
+                href={item.itemRoute}
+                rel="noreferrer"
+                target="_blank"
+                className="slide-title"
+              >
+                {item.title}
+              </a>
               <p className="slide-desc">{item.desc}</p>
             </div>
           </div>
@@ -85,9 +95,9 @@ const ProjectsSlider = () => {
           <div key={i} className="progress"></div>
         ))}
       </div>
-      <button className="button button--one btn-slider">
-        &lt; See All &#47;&gt;
-      </button>
+      <Link to="/projects" className="btn-slider">
+        <button className="button button--one ">&lt; See All &#47;&gt;</button>
+      </Link>
     </div>
   );
 };

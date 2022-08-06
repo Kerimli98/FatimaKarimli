@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PageNotFounds = () => {
+const PageNotFound = () => {
     return (
         <div>
             no page like this
@@ -8,4 +8,4 @@ const PageNotFounds = () => {
     );
 };
 
-export default PageNotFounds;
+export default PageNotFound;

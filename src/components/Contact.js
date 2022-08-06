@@ -11,35 +11,50 @@ const Contact = () => {
       </h4>
       <div className="contacts">
         <div className="contact-circle linkedin">
-          <div className="outer-circle">
+          <a
+            href="https://www.linkedin.com/in/fatimakarimli"
+            target="_blank"
+            rel="noreferrer"
+            className="outer-circle"
+          >
             <span>&lt;&gt;</span>
             Linkedin
             <span>&lt;&#47;&gt;</span>
-          </div>
+          </a>
           <div className="inner-circle"></div>
         </div>
         <div className="contact-circle github">
-          <div className="outer-circle">
+          <a
+            href="https://github.com/Kerimli98"
+            target="_blank"
+            rel="noreferrer"
+            className="outer-circle"
+          >
             <span>&lt;&gt;</span>
             Github
             <span>&lt;&#47;&gt;</span>
-          </div>
+          </a>
           <div className="inner-circle"></div>
         </div>
         <div className="contact-circle gmail">
-          <div className="outer-circle">
+          <a href="mailto:fatimakarimly@gmail.com" className="outer-circle">
             <span>&lt;&gt;</span>
             Gmail
             <span>&lt;&#47;&gt;</span>
-          </div>
+          </a>
           <div className="inner-circle"></div>
         </div>
         <div className="contact-circle instagram">
-          <div className="outer-circle">
+          <a
+            href="https://www.instagram.com/veistsin/"
+            target="_blank"
+            rel="noreferrer"
+            className="outer-circle"
+          >
             <span>&lt;&gt;</span>
             Instagram
             <span>&lt;&#47;&gt;</span>
-          </div>
+          </a>
           <div className="inner-circle"></div>
         </div>
       </div>
