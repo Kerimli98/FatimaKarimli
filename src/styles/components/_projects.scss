@@ -121,6 +121,7 @@
           height: 100%;
           width: 100%;
           opacity: 0;
+          visibility: hidden;
           transition: all 0.3s ease;
         }
         .project-content * {
@@ -129,6 +130,7 @@
           opacity: 0;
         }
         &:hover .project-content {
+          visibility: visible;
           opacity: 1;
         }
         &:hover .project-content * {
@@ -191,18 +193,20 @@
     .projects {
       .project-border {
         transition: all 0.3s ease;
+
         &.clicked {
           background-color: $color-green-light-2;
         }
         .project {
-            &.clicked .project-content {
-                opacity: 1;
-              }
-              &.clicked .project-content * {
-                opacity: 1;
-                transform: translateY(0);
-              }
-      
+          visibility: hidden;
+          &.clicked .project-content {
+            opacity: 1;
+            visibility: visible;
+          }
+          &.clicked .project-content * {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       }
     }
