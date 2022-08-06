@@ -2,8 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-//   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   &__line {
     margin-bottom: 5rem;
     height: 13rem;
@@ -132,8 +131,20 @@
     }
   }
 }
+@media screen and (max-width: 1100px) {
+  .contact {
+    min-height: unset;
+    height: 60vh;
+    // justify-content: center;
+    .contacts {
+      // overflow: hidden;
+    }
+  }
+}
 @media screen and (max-width: 900px) {
   .contact {
+    height: unset;
+    max-height: 100vh;
     &__line {
       &::after {
         right: -3px;

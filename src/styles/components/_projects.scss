@@ -4,12 +4,94 @@
   margin: 0 auto;
   flex-direction: column;
   padding: 5rem 0;
+  position: relative;
+  div.backBtn {
+    width: 13rem;
+    left: 0%;
+    top: 3%;
+    background-color: #f4f4f4;
+    transition: all 0.4s ease;
+    position: absolute;
+    cursor: pointer;
+    z-index: 500;
+  }
+
+  span.line {
+    bottom: auto;
+    right: auto;
+    top: auto;
+    left: auto;
+    background-color: $color-green-light-2;
+    border-radius: 10px;
+    width: 100%;
+    left: 0px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s,
+      background-color 0.2s ease;
+  }
+
+  span.tLine {
+    top: 0px;
+  }
+
+  span.mLine {
+    top: 1.3rem;
+    opacity: 0;
+  }
+
+  span.bLine {
+    top: 4rem;
+  }
+
+  .label {
+    color: $color-white;
+    font-family: "Saira", sans-serif;
+    position: absolute;
+    left: 0px;
+    top: 0.5rem;
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s ease;
+    font-size: 2rem;
+  }
+
+  div.backBtn:hover span.label {
+    left: 2.5rem;
+  }
+
+  div.backBtn:hover span.line {
+    left: -1rem;
+    height: 0.5rem;
+    background-color: $color-white;
+  }
+
+  div.backBtn:hover span.tLine {
+    width: 2.5rem;
+    transform: rotate(-45deg);
+    left: -1.5rem;
+    top: 1.2rem;
+  }
+
+  div.backBtn:hover span.mLine {
+    opacity: 1;
+    width: 3.5rem;
+    top: 2rem;
+  }
+
+  div.backBtn:hover span.bLine {
+    width: 2.5rem;
+    transform: rotate(45deg);
+    left: -1.5rem;
+    top: 2.8rem;
+  }
   h3 {
     font-family: mainFont;
     color: $color-white;
     font-size: 6rem;
     letter-spacing: 7px;
-    margin-top: 1rem;
+    margin-top: 7rem;
     align-self: center;
   }
   .filter-btns {
@@ -185,8 +267,20 @@
     }
   }
 }
+@media (max-width: 1100px) {
+  .projects-page {
+    div.backBtn {
+      left: 0%;
+      top: 2%;
+    }
+  }
+}
 @media (max-width: 830px) {
   .projects-page {
+    div.backBtn {
+      left: 0%;
+      top: 1%;
+    }
     .projects {
       justify-content: center;
     }
@@ -233,6 +327,11 @@
 
 @media (max-width: 370px) {
   .projects-page {
+    h3 {
+      font-size: 4rem;
+      letter-spacing: 5px;
+      margin-top: 6rem;
+    }
     .projects {
       grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
       gap: 3rem;

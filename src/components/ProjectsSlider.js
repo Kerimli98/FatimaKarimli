@@ -61,7 +61,7 @@ const ProjectsSlider = () => {
         {projects.map((item) => (
           <div key={item.id} className="project-slide">
             <Link
-              to={`projects/${item.itemRoute}`}
+              to={`/projects/${item.title}`}
               className="img-container"
               onMouseEnter={() => setAnimated(() => true)}
               onAnimationEnd={() => setAnimated(() => false)}

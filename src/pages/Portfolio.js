@@ -52,6 +52,14 @@ const Portfolio = () => {
   useEffect(() => {}, [itemId]);
   return (
     <div className="projects-page">
+      {/* <Link to="/"> */}
+        <div class="backBtn">
+          <span class="line tLine"></span>
+          <span class="line mLine"></span>
+          <span class="label">Home</span>
+          <span class="line bLine"></span>
+        </div>
+      {/* </Link> */}
       <h3>My Works</h3>
       <div className="filter-btns">
         <button
