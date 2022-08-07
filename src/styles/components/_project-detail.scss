@@ -31,7 +31,7 @@
       }
       &__right {
         .inner {
-          height: 55rem;
+          height: 57rem;
           background-color: $color-green-light-2;
           clip-path: polygon(
             5% 10%,
@@ -51,6 +51,61 @@
             85% 0%,
             15% 0%
           );
+
+          .inner-figure {
+            position: relative;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            height: 56rem;
+            width: 98%;
+            clip-path: polygon(
+              5% 10%,
+              5% 30%,
+              0% 35%,
+              0% 65%,
+              5% 70%,
+              5% 90%,
+              15% 100%,
+              85% 100%,
+              95% 90%,
+              95% 70%,
+              100% 65%,
+              100% 35%,
+              95% 30%,
+              95% 10%,
+              85% 0%,
+              15% 0%
+            );
+            background-color: $color-figure-dark;
+            .inner-image {
+              position: relative;
+              transform: translate(-50%, -50%);
+              top: 50%;
+              left: 50%;
+              height: 55rem;
+              width: 98%;
+              clip-path: polygon(
+                5% 10%,
+                5% 30%,
+                0% 35%,
+                0% 65%,
+                5% 70%,
+                5% 90%,
+                15% 100%,
+                85% 100%,
+                95% 90%,
+                95% 70%,
+                100% 65%,
+                100% 35%,
+                95% 30%,
+                95% 10%,
+                85% 0%,
+                15% 0%
+              );
+              object-fit: cover;
+            }
+          }
         }
       }
     }
@@ -68,6 +123,7 @@
           letter-spacing: 7px;
           display: flex;
           align-items: center;
+          white-space: 2px;
           flex-wrap: wrap;
           .green-text-lang {
             font-size: 7rem;
@@ -266,10 +322,11 @@
       }
     }
     .project-goal {
-      height: 100vh;
+      margin-top: 5rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       overflow: hidden;
       .title {
         font-family: mainFont;
@@ -279,6 +336,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 4rem;
         .green-text-lang {
           font-size: 7rem;
           margin-left: 2rem;
@@ -288,10 +346,11 @@
       .goal-container {
         display: inline-block;
         position: relative;
+        border: 1px solid red;
         margin-top: 4rem;
         width: 100%;
         left: 14%;
-        top: 10%;
+        top: 0%;
         .hexagon {
           background-color: $color-green-light-2;
           position: absolute;
@@ -428,9 +487,9 @@
           z-index: 50;
           position: absolute;
           transform: translate(-50%, -50%);
-          top: 2.8%;
+          top: 3%;
           left: 36.7%;
-          width: 38.9rem;
+          width: 30%;
           background-color: $color-green-light;
           height: 2.9rem;
           clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 8% 100%);
@@ -440,9 +499,9 @@
           z-index: 50;
           position: absolute;
           transform: translate(-50%, -50%);
-          top: 96.8%;
+          top: 96.2%;
           left: 38%;
-          width: 45.8rem;
+          width: 35%;
           background-color: $color-green-light;
           height: 3.6rem;
           clip-path: polygon(
@@ -453,6 +512,294 @@
             100% 100%,
             0 100%
           );
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .project-detail {
+    .project-container {
+      .project-goal {
+        .goal-container {
+          left: 4%;
+          .big-chip {
+            width: 90%;
+          }
+          .big-chip-before {
+            top: 3%;
+            left: 47.2%;
+            width: 38.2%;
+            height: 2.9rem;
+          }
+
+          .big-chip-after {
+            top: 96.5%;
+            left: 48.4%;
+            width: 44.8%;
+            height: 3.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1076px) {
+  .project-detail {
+    padding: 15rem 0;
+    .project-container {
+      .project-brief {
+        grid-template-columns: repeat(auto-fit, minmax(38rem, max-content));
+        gap: 4rem;
+        height: unset;
+        &__left {
+          .project-title {
+            font-size: 5rem;
+            letter-spacing: 6px;
+          }
+          .project-desc {
+            font-size: 2rem;
+            margin-top: 3rem;
+          }
+        }
+        &__right {
+          .inner {
+            height: 45rem;
+            .inner-figure {
+              height: 44rem;
+              .inner-image {
+                height: 43rem;
+              }
+            }
+          }
+        }
+      }
+      .which-languages {
+        .languages-left {
+          .left-title {
+            font-size: 5rem;
+            letter-spacing: 6px;
+            .green-text-lang {
+              font-size: 5rem;
+              margin-left: 2rem;
+            }
+          }
+        }
+      }
+      .project-goal {
+       padding-top: 12rem;
+        .title {
+          font-size: 5rem;
+          letter-spacing: 6px;
+          .green-text-lang {
+            font-size: 6rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 781px) {
+  .project-detail {
+    width: 92%;
+
+    .project-container {
+      .project-brief {
+        &__right {
+          .inner {
+            height: 35rem;
+            clip-path: polygon(
+              0% 85%,
+              5% 95%,
+              30% 95%,
+              35% 100%,
+              65% 100%,
+              70% 95%,
+              95% 95%,
+              100% 85%,
+              100% 15%,
+              95% 5%,
+              70% 5%,
+              65% 0%,
+              35% 0%,
+              30% 5%,
+              5% 5%,
+              0% 15%
+            );
+            .inner-figure {
+              height: 34rem;
+              clip-path: polygon(
+                0% 85%,
+                5% 95%,
+                30% 95%,
+                35% 100%,
+                65% 100%,
+                70% 95%,
+                95% 95%,
+                100% 85%,
+                100% 15%,
+                95% 5%,
+                70% 5%,
+                65% 0%,
+                35% 0%,
+                30% 5%,
+                5% 5%,
+                0% 15%
+              );
+              .inner-image {
+                height: 33rem;
+                clip-path: polygon(
+                  0% 85%,
+                  5% 95%,
+                  30% 95%,
+                  35% 100%,
+                  65% 100%,
+                  70% 95%,
+                  95% 95%,
+                  100% 85%,
+                  100% 15%,
+                  95% 5%,
+                  70% 5%,
+                  65% 0%,
+                  35% 0%,
+                  30% 5%,
+                  5% 5%,
+                  0% 15%
+                );
+              }
+            }
+          }
+        }
+      }
+
+      .project-goal {
+        .goal-container {
+          left: 0%;
+          .hexagon {
+            left: 8%;
+            height: 10rem;
+            width: 10rem;
+
+            .inner-hexagon {
+              top: 50%;
+              left: 50%;
+              width: 9rem;
+              height: 9rem;
+
+              .inner-inner-hex {
+                width: 8rem;
+                height: 8rem;
+
+                .deep-hex {
+                  width: 7rem;
+                  height: 7rem;
+                  font-size: 5rem;
+                }
+              }
+            }
+          }
+          .big-chip {
+            height: 38rem;
+            width: 100%;
+            .big-chip-inner {
+              height: 36rem;
+            }
+          }
+          .big-chip-before {
+            top: 2.8%;
+            left: 52.3%;
+            width: 42.2%;
+            height: 2.4rem;
+          }
+
+          .big-chip-after {
+            top: 96.4%;
+            left: 54.4%;
+            width: 50%;
+            height: 3.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 691px) {
+  .project-detail {
+    .project-container {
+      .which-languages {
+        .languages-left {
+          .left-title {
+            .green-text-lang {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .project-detail {
+    .project-container {
+      .project-brief {
+        &__right {
+          .inner {
+            height: 24rem;
+            .inner-figure {
+              height: 23rem;
+
+              .inner-image {
+                height: 22rem;
+              }
+            }
+          }
+        }
+      }
+
+      .which-languages {
+        .languages-right {
+          .outerr-circle {
+            width: 40rem;
+            height: 40rem;
+          }
+          .dotted-circle {
+            width: 36rem;
+            height: 36rem;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='360' ry='360' stroke='rgb(118,169,136)' stroke-width='3' stroke-dasharray='5%25%2c 9%25' stroke-dashoffset='86' stroke-linecap='square'/%3e%3c/svg%3e");
+            border-radius: 100px;
+          }
+          .scewed-tag {
+            font-size: 12rem;
+          }
+        }
+      }
+
+      .project-goal {
+        .goal-container {
+          .hexagon {
+            left: 12%;
+          }
+
+          .big-chip {
+            height: 28rem;
+            .big-chip-inner {
+              height: 27rem;
+            }
+          }
+          .big-chip-before {
+            top: 2.8%;
+            left: 52.3%;
+            width: 42.2%;
+            height: 1.8rem;
+          }
+
+          .big-chip-after {
+            top: 96.4%;
+            left: 54.4%;
+            width: 51%;
+            height: 2.4rem;
+          }
         }
       }
     }

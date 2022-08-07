@@ -138,18 +138,32 @@ div.backBtn:hover span.bLine {
 }
 
 .go-to-btn {
+  display: inline-block;
   margin-top: 4rem;
+  width: 100%;
   color: $color-white;
   font-size: 3rem;
   font-family: "Saira", sans-serif;
-}
-
-@media screen and (max-width: 524px) {
-  button {
-    padding: 0.8rem 1.2rem;
-    font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 19rem;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-white;
+  }
+  &:hover {
+    color: $color-green-light;
+  }
+  &:hover::after {
+    background-color: $color-green-light;
   }
 }
+
 @media (max-width: 1100px) {
   div.backBtn {
     left: 0%;
@@ -162,4 +176,20 @@ div.backBtn:hover span.bLine {
     left: 0%;
     top: 1%;
   }
+  .go-to-btn {
+    font-size: 2rem;
+    margin-top: 3rem;
+    &::after{
+      width: 13rem;
+    }
+  }
+}
+
+@media screen and (max-width: 524px) {
+  button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 490px) {
 }

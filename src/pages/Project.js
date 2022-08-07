@@ -30,11 +30,19 @@ const Project = () => {
               target="_black"
               className="go-to-btn"
             >
-              <div className="">Go to website</div>
+              Go to website
             </a>
           </div>
           <div className="project-brief__right">
-            <div className="inner"></div>
+            <div className="inner">
+              <div className="inner-figure">
+                <img
+                  src="/assets/images/eazypizz.png"
+                  alt=""
+                  className="inner-image"
+                />
+              </div>
+            </div>
           </div>
         </section>
         <section className="which-languages">
@@ -79,10 +87,9 @@ const Project = () => {
             <div className="big-chip-before"></div>
 
             <div className="big-chip">
-
               <div className="big-chip-inner"></div>
             </div>
-            
+
             <div className="big-chip-after"></div>
           </div>
         </section>
