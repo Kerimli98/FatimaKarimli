@@ -55,13 +55,36 @@ const Project = () => {
                 <div className="circle2"></div>
                 <div className="circle3"></div>
                 <div className="inner-circle"></div>
-                <p className="green-text z-top text-font"> &lt; HTML &#47;&gt;</p>
+                <p className="green-text z-top text-font">
+                  {" "}
+                  &lt; HTML &#47;&gt;
+                </p>
               </div>
             </div>
           </div>
         </section>
         <section className="project-goal">
+          <p className="title">
+            Project <span className="green-text-lang"> Goal</span>
+          </p>
+
+          <div className="goal-container">
+            <div className="hexagon">
+              <div className="inner-hexagon">
+                <div className="inner-inner-hex">
+                  <div className="deep-hex">1</div>
+                </div>
+              </div>
+            </div>
+            <div className="big-chip-before"></div>
+
+            <div className="big-chip">
+
+              <div className="big-chip-inner"></div>
+            </div>
             
+            <div className="big-chip-after"></div>
+          </div>
         </section>
       </div>
     </div>

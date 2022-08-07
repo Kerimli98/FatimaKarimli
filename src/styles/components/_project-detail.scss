@@ -3,8 +3,8 @@
   width: 82%;
   margin: 0 auto;
   flex-direction: column;
-  padding: 5rem 0;
   position: relative;
+  padding: 5rem 0;
   .project-container {
     .project-brief {
       height: calc(100vh - 5rem);
@@ -266,6 +266,195 @@
       }
     }
     .project-goal {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      .title {
+        font-family: mainFont;
+        font-size: 7rem;
+        color: $color-white;
+        letter-spacing: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .green-text-lang {
+          font-size: 7rem;
+          margin-left: 2rem;
+          color: $color-green-light-2;
+        }
+      }
+      .goal-container {
+        display: inline-block;
+        position: relative;
+        margin-top: 4rem;
+        width: 100%;
+        left: 14%;
+        top: 10%;
+        .hexagon {
+          background-color: $color-green-light-2;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          z-index: 50;
+          top: 0%;
+          left: 5%;
+          height: 15rem;
+          width: 15rem;
+          clip-path: polygon(
+            0% 25%,
+            0% 75%,
+            50% 100%,
+            100% 75%,
+            100% 25%,
+            50% 0%
+          );
+          .inner-hexagon {
+            background-color: $color-green-dark;
+            display: flex;
+            position: relative;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 14rem;
+            height: 14rem;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(
+              0% 25%,
+              0% 75%,
+              50% 100%,
+              100% 75%,
+              100% 25%,
+              50% 0%
+            );
+            .inner-inner-hex {
+              background-color: $color-green-light-2;
+              display: flex;
+              width: 13rem;
+              height: 13rem;
+              align-items: center;
+              justify-content: center;
+              clip-path: polygon(
+                0% 25%,
+                0% 75%,
+                50% 100%,
+                100% 75%,
+                100% 25%,
+                50% 0%
+              );
+              .deep-hex {
+                background-color: $color-green-dark;
+                display: flex;
+                width: 12rem;
+                height: 12rem;
+                align-items: center;
+                justify-content: center;
+                clip-path: polygon(
+                  0% 25%,
+                  0% 75%,
+                  50% 100%,
+                  100% 75%,
+                  100% 25%,
+                  50% 0%
+                );
+                color: $color-green-light;
+                font-family: mainFont;
+                font-size: 7rem;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .big-chip {
+          display: inline-block;
+          background-color: $color-green-light;
+          height: 50rem;
+          width: 70%;
+          clip-path: polygon(
+            0% 15%,
+            8% 0%,
+            30% 0%,
+            34% 7%,
+            70% 7%,
+            75% 0%,
+            94% 0%,
+            100% 10%,
+            100% 85%,
+            80% 100%,
+            75% 96%,
+            57% 96%,
+            52% 92%,
+            38% 92%,
+            28% 100%,
+            14% 100%,
+            0% 92%
+          );
+          .big-chip-inner {
+            z-index: 51;
+            position: relative;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            background-color: $color-green-dark;
+            height: 48rem;
+            width: 98%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(
+              0% 15%,
+              8% 0%,
+              30% 0%,
+              34% 7%,
+              70% 7%,
+              75% 0%,
+              94% 0%,
+              100% 10%,
+              100% 85%,
+              80% 100%,
+              75% 96%,
+              57% 96%,
+              52% 92%,
+              38% 92%,
+              28% 100%,
+              14% 100%,
+              0% 92%
+            );
+          }
+        }
+        .big-chip-before {
+          z-index: 50;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 2.8%;
+          left: 36.7%;
+          width: 38.9rem;
+          background-color: $color-green-light;
+          height: 2.9rem;
+          clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 8% 100%);
+        }
+
+        .big-chip-after {
+          z-index: 50;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 96.8%;
+          left: 38%;
+          width: 45.8rem;
+          background-color: $color-green-light;
+          height: 3.6rem;
+          clip-path: polygon(
+            18% 0,
+            45.5% 0,
+            55.5% 51%,
+            91% 51%,
+            100% 100%,
+            0 100%
+          );
+        }
+      }
     }
   }
 }
