@@ -6,7 +6,23 @@ const projects = [
     itemRoute: "bidTaxi",
     languages: ["React", "CSS", "HTML"],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat, expedita laboriosam eveniet amet, assumenda nesciunt laborum cumque ratione quo ullam numquam tenetur fugiat. Quos.",
-    goal: "",
+    goal: [
+      {
+        goalName: "Saving time",
+        goalDesc:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem perferendis tempora beatae facilis veniam aliquam enim necessitatibus optio non vel?",
+      },
+      {
+        goalName: "nese nese",
+        goalDesc:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem perferendis tempora beatae facilis veniam aliquam enim necessitatibus optio non vel?",
+      },
+      {
+        goalName: "lalalala",
+        goalDesc:
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem perferendis tempora beatae facilis veniam aliquam enim necessitatibus optio non vel?",
+      },
+    ],
     challanges: "",
     solution: "",
     screenshots: "/assets/images/bid.png",
@@ -135,7 +151,7 @@ const projects = [
     websitelink: "https://studio-ghibli-go.netlify.app/",
     itemRoute: "bidTaxi",
 
-    languages: ["React", "SCSS", "HTML", 'Redux'],
+    languages: ["React", "SCSS", "HTML", "Redux"],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat, expedita laboriosam eveniet amet, assumenda nesciunt laborum cumque ratione quo ullam numquam tenetur fugiat. Quos.",
     goal: "",
     challanges: "",
@@ -162,7 +178,7 @@ const projects = [
     websitelink: "eazypizz.netlify.app",
     itemRoute: "stremio",
 
-    languages: ["React", "SASS/SCSS", "HTML", 'Redux'],
+    languages: ["React", "SASS/SCSS", "HTML", "Redux"],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat, expedita laboriosam eveniet amet, assumenda nesciunt laborum cumque ratione quo ullam numquam tenetur fugiat. Quos.",
     goal: "",
     challanges: "",

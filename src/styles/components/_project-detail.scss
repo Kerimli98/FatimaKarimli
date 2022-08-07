@@ -323,11 +323,13 @@
     }
     .project-goal {
       margin-top: 5rem;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      padding: 2rem 0;
       .title {
         font-family: mainFont;
         font-size: 7rem;
@@ -336,7 +338,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 4rem;
+        margin-bottom: 10rem;
         .green-text-lang {
           font-size: 7rem;
           margin-left: 2rem;
@@ -346,7 +348,6 @@
       .goal-container {
         display: inline-block;
         position: relative;
-        margin-top: 4rem;
         width: 100%;
         left: 14%;
         top: 0%;
@@ -354,7 +355,7 @@
           background-color: $color-green-light-2;
           position: absolute;
           transform: translate(-50%, -50%);
-          z-index: 50;
+          z-index: 2;
           top: 0%;
           left: 5%;
           height: 15rem;
@@ -426,7 +427,8 @@
         }
 
         .big-chip {
-          display: inline-block;
+          position: relative;
+          // z-index: -1;
           background-color: $color-green-light;
           height: 50rem;
           width: 70%;
@@ -450,8 +452,8 @@
             0% 92%
           );
           .big-chip-inner {
-            z-index: 51;
             position: relative;
+            z-index: 15;
             transform: translate(-50%, -50%);
             top: 50%;
             left: 50%;
@@ -459,8 +461,9 @@
             height: 48rem;
             width: 98%;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
             clip-path: polygon(
               0% 15%,
               8% 0%,
@@ -480,6 +483,29 @@
               14% 100%,
               0% 92%
             );
+            .goal-slide {
+              position: relative !important;
+              //   transform: translate(-50%, -50%);
+              //   top: 50% !important;
+              //   left: 50%;
+              width: 95%;
+              margin-top: 8rem;
+              padding: 0 5rem;
+              overflow: hidden;
+              display: flex !important;
+              flex-direction: column;
+              color: $color-white;
+              z-index: 999999;
+              .goal-name {
+                font-family: mainFont;
+                font-size: 5rem;
+              }
+              .goal-desc {
+                font-family: "Saira", sans-serif;
+                font-size: 3rem;
+                margin-top: 2rem;
+              }
+            }
           }
         }
         .big-chip-before {
@@ -515,8 +541,42 @@
       }
     }
   }
+  .slider-arrow-left {
+    width: 5rem;
+    height: 5rem;
+    font-weight: 300;
+    clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background-color: $color-green-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  .slider-arrow-right {
+    width: 5rem;
+    height: 5rem;
+    font-weight: 300;
+    clip-path: polygon(25% 0%, 50% 50%, 25% 100%, 0% 100%, 25% 50%, 0% 0%);
+    background-color: $color-green-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
 }
 
+.slick-arrow.slick-prev {
+  left: 14% !important;
+  top: unset !important;
+  bottom: -30% !important;
+  transform: translate(-50%, -50%) !important;
+}
+.slick-arrow.slick-next {
+  right: 14% !important;
+  top: unset !important;
+  bottom: -30% !important;
+  transform: translate(-50%, -50%) !important;
+}
 @media (max-width: 1400px) {
   .project-detail {
     .project-container {
@@ -587,7 +647,7 @@
         }
       }
       .project-goal {
-       padding-top: 12rem;
+        padding-top: 12rem;
         .title {
           font-size: 5rem;
           letter-spacing: 6px;
@@ -595,8 +655,34 @@
             font-size: 6rem;
           }
         }
+        .goal-container {
+          .big-chip {
+            .big-chip-inner {
+              .goal-slide {
+                width: 95%;
+                margin-top: 8rem;
+                padding: 0 12rem;
+
+                .goal-name {
+                  font-size: 4rem;
+                }
+                .goal-desc {
+                  font-size: 2.5rem;
+                }
+              }
+            }
+          }
+        }
       }
     }
+  }
+}
+@media (max-width: 805px) {
+  .slick-arrow.slick-prev {
+    bottom: -20% !important;
+  }
+  .slick-arrow.slick-next {
+    bottom: -20% !important;
   }
 }
 @media (max-width: 781px) {
@@ -703,6 +789,19 @@
             width: 100%;
             .big-chip-inner {
               height: 36rem;
+
+              .goal-slide {
+                width: 100%;
+                margin-top: 5rem;
+                padding: 0 10rem;
+
+                .goal-name {
+                  font-size: 3.7rem;
+                }
+                .goal-desc {
+                  font-size: 2.3rem;
+                }
+              }
             }
           }
           .big-chip-before {
@@ -722,6 +821,12 @@
       }
     }
   }
+  .slick-arrow.slick-prev {
+    bottom: -30% !important;
+  }
+  .slick-arrow.slick-next {
+    bottom: -30% !important;
+  }
 }
 @media (max-width: 691px) {
   .project-detail {
@@ -735,8 +840,30 @@
           }
         }
       }
+      .project-goal {
+        .goal-container {
+          .big-chip {
+            .big-chip-inner {
+              .goal-slide {
+                width: 100%;
+                margin-top: 5rem;
+                padding: 0 4rem;
+
+                .goal-name {
+                  font-size: 3.7rem;
+                }
+                .goal-desc {
+                  font-size: 2.3rem;
+                  margin-top: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
+
 }
 @media (max-width: 500px) {
   .project-detail {

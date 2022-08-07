@@ -41,7 +41,6 @@ const ProjectsSlider = () => {
   const sliderRef = useRef();
   const n = slideIndex + 1;
   const [animated, setAnimated] = useState(false);
-  console.log(animated);
   return (
     <div className="project-slider">
       <h2 className="project-slider__heading">

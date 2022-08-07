@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import projects from "../data";
+const PreviousBtn = (props) => {
+  const { className, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <div className="slider-arrow-left"></div>
+    </div>
+  );
+};
+const NextBtn = (props) => {
+  const { className, onClick } = props;
 
+  return (
+    <div className={className} onClick={onClick}>
+      <div className="slider-arrow-right"></div>
+    </div>
+  );
+};
 const Project = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [updateCount, setUpdateCount] = useState(0);
+  const sliderRef = useRef();
+
+  const settings = {
+    dots: false,
+    prevArrow: <PreviousBtn />,
+    nextArrow: <NextBtn />,
+    afterChange: () => setUpdateCount(updateCount + 1),
+    beforeChange: (current, next) => setSlideIndex(next),
+  };
   const { id } = useParams();
   const project = projects.find((project) => project.title === id);
-  console.log(project.languages);
 
   return (
     <div className="project-detail">
@@ -77,20 +106,34 @@ const Project = () => {
           </p>
 
           <div className="goal-container">
-            <div className="hexagon">
-              <div className="inner-hexagon">
-                <div className="inner-inner-hex">
-                  <div className="deep-hex">1</div>
+            {window.innerWidth > 820 ? (
+              <>
+                <div className="hexagon">
+                  <div className="inner-hexagon">
+                    <div className="inner-inner-hex">
+                      <div className="deep-hex">{slideIndex + 1}</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="big-chip-before"></div>
+                <div className="big-chip-before"></div>
 
-            <div className="big-chip">
-              <div className="big-chip-inner"></div>
-            </div>
-
-            <div className="big-chip-after"></div>
+                <div className="big-chip">
+                  <div className="big-chip-inner">
+                    <Slider {...settings} ref={sliderRef}>
+                      {project.goal.map((goal) => (
+                        <div key={goal.goalName} className="goal-slide">
+                          <p className="goal-name">{goal.goalName}</p>
+                          <p className="goal-desc">{goal.goalDesc}</p>
+                        </div>
+                      ))}
+                    </Slider>
+                  </div>
+                </div>
+                <div className="big-chip-after"></div>
+              </>
+            ) : (
+              <></>
+            )}
           </div>
         </section>
       </div>
