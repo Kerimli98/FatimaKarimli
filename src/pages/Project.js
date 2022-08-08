@@ -77,7 +77,9 @@ const Project = () => {
   return (
     <div className="project-detail">
       <Link to="/">
-        <button className="button button--one home-btn">&lt;Home&#47;&gt;</button>
+        <button className="button button--one home-btn">
+          &lt;Home&#47;&gt;
+        </button>
       </Link>
 
       <div className="project-container">
@@ -85,7 +87,7 @@ const Project = () => {
           <div
             className="project-brief__left"
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="800"
           >
             <p className="project-title">{project.title}</p>
             <p className="project-desc">{project.desc}</p>
@@ -101,7 +103,7 @@ const Project = () => {
           <div
             className="project-brief__right"
             data-aos="fade-left"
-            data-aos-duration="1000"
+            data-aos-duration="800"
           >
             <div className="inner">
               <div className="inner-figure">
@@ -130,7 +132,7 @@ const Project = () => {
           <div
             className="languages-right"
             data-aos="zoom-in-left"
-            data-aos-duration="500"
+            data-aos-duration="00"
           >
             <div className="outerr-circle"></div>
             <div className="dotted-circle">
@@ -150,14 +152,14 @@ const Project = () => {
           </div>
         </section>
         <section className="project-goal">
-          <p className="title">
+          <p className="title" data-aos="fade-up" data-aos-duration="1000">
             Project <span className="green-text-lang"> Goal</span>
           </p>
 
           <div
             className="goal-container"
             data-aos="fade-up"
-            data-aos-duration="500"
+            data-aos-duration="1000"
           >
             {updateScreen ? (
               <>

@@ -50,7 +50,11 @@ const ProjectsSlider = () => {
   const [animated, setAnimated] = useState(false);
   return (
     <div className="project-slider">
-      <h2 className="project-slider__heading">
+      <h2
+        className="project-slider__heading"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <span className="tags positioned-top"> &lt;h2&gt;</span>
         My Portfolio
         <span className="tags positioned-bottom">&lt;&#47;h2&gt;</span>
