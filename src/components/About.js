@@ -32,7 +32,7 @@ const About = () => {
             <div className="circle2"></div>
             <div className="circle3"></div>
             <div className="inner-circle"></div>
-            <p className="green-text z-top"> &lt;Download CV&#47;&gt;</p>
+            <a href="/assets/images/bid.png" download className="green-text z-top"> &lt;Download CV&#47;&gt;</a>
           </div>
         </div>
       </div>

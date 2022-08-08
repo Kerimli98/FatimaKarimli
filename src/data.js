@@ -8,16 +8,19 @@ const projects = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat, expedita laboriosam eveniet amet, assumenda nesciunt laborum cumque ratione quo ullam numquam tenetur fugiat. Quos.",
     goal: [
       {
+        id: 1,
         goalName: "Saving time",
         goalDesc:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem perferendis tempora beatae facilis veniam aliquam enim necessitatibus optio non vel?",
       },
       {
+        id: 2,
         goalName: "nese nese",
         goalDesc:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem perferendis tempora beatae facilis veniam aliquam enim necessitatibus optio non vel?",
       },
       {
+        id: 3,
         goalName: "lalalala",
         goalDesc:
           "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem perferendis tempora beatae facilis veniam aliquam enim necessitatibus optio non vel?",

@@ -16,7 +16,23 @@
     position: relative;
     justify-content: center;
   }
+  .slick-prev {
+    left: 14rem !important;
+  }
 
+  .slick-next {
+    right: 14rem !important;
+  }
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
+    background: none;
+    width: 5rem;
+    height: 5rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    z-index: 90001;
+  }
 
   .slider-arrow {
     width: 5rem;
@@ -47,23 +63,7 @@
     padding: 5rem 0;
     outline: none;
     overflow: hidden;
-    .slick-prev {
-      left: 14rem !important;
-    }
-  
-    .slick-next {
-      right: 14rem !important;
-    }
-    .slick-arrow.slick-prev,
-    .slick-arrow.slick-next {
-      background: none;
-      width: 5rem;
-      height: 5rem;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-      z-index: 90001;
-    }
+
     .img-container {
       position: relative;
       display: inline-block;

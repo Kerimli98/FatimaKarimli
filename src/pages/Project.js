@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -36,6 +36,26 @@ const Project = () => {
   };
   const { id } = useParams();
   const project = projects.find((project) => project.title === id);
+  const [updateScreen, setUpdateScreen] = useState(
+    window.innerWidth > 820 ? true : false
+  );
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 820) {
+        setUpdateScreen(true);
+      } else setUpdateScreen(false);
+    });
+    return () => window.removeEventListener("resize", () => {});
+  }, []);
+
+  //   useEffect(() => {
+  //     window.addEventListener("resize", () => {
+  //       if (window.innerWidth < 820) {
+  //         setUpdateScreen(false);
+  //       }
+  //     });
+  //     return () => window.removeEventListener("resize", () => {});
+  //   }, []);
 
   return (
     <div className="project-detail">
@@ -106,7 +126,7 @@ const Project = () => {
           </p>
 
           <div className="goal-container">
-            {window.innerWidth > 820 ? (
+            {updateScreen ? (
               <>
                 <div className="hexagon">
                   <div className="inner-hexagon">
@@ -132,7 +152,23 @@ const Project = () => {
                 <div className="big-chip-after"></div>
               </>
             ) : (
-              <></>
+              <>
+                {project.goal.map((goal) => (
+                  <div className="goal" key={goal.id}>
+                    <div className="hexagon">
+                      <div className="inner-hexagon">
+                        <div className="inner-inner-hex">
+                          <div className="deep-hex">{goal.id}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="goal-content">
+                      <div className="goal-title">{goal.goalName}</div>
+                      <div className="goal-desc">{goal.goalDesc}</div>
+                    </div>
+                  </div>
+                ))}
+              </>
             )}
           </div>
         </section>
