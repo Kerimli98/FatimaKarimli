@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,6 +28,12 @@ const NextBtn = (props) => {
   );
 };
 const ProjectsSlider = () => {
+  useEffect(() => {
+    AOS.init({
+      delay: 170,
+    });
+    AOS.refresh();
+  }, []);
   const [slideIndex, setSlideIndex] = useState(0);
   const [updateCount, setUpdateCount] = useState(0);
   const settings = {
@@ -59,7 +66,7 @@ const ProjectsSlider = () => {
       <Slider {...settings} ref={sliderRef}>
         {projects.map((item) => (
           <div key={item.id} className="project-slide">
-            <Link
+            <Link data-aos="zoom-in-right"
               to={`/projects/${item.title}`}
               className="img-container"
               onMouseEnter={() => setAnimated(() => true)}
@@ -75,7 +82,7 @@ const ProjectsSlider = () => {
               <div className={animated ? "circle animated4" : ""}></div>
             </Link>
 
-            <div className="slide-content">
+            <div className="slide-content" data-aos="zoom-in-left">
               <Link to={`/projects/${item.title}`} className="slide-title">
                 {item.title}
               </Link>
@@ -90,7 +97,9 @@ const ProjectsSlider = () => {
         ))}
       </div>
       <Link to="/projects" className="btn-slider">
-        <button className="button button--one ">&lt; See All &#47;&gt;</button>
+        <button style={{ letterSpacing: "0" }} className="button button--one ">
+          &lt; See All &#47;&gt;
+        </button>
       </Link>
     </div>
   );

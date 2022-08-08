@@ -48,20 +48,13 @@ const Portfolio = () => {
     }
   }, [category]);
   const [itemId, setItemId] = useState(0);
- 
-  
+
   return (
     <div className="projects-page">
-
       <Link to="/">
-
-        <a href="/" className="backBtn">
-          <span className="line tLine"></span>
-          <span className="line mLine"></span>
-          <span className="label">Home</span>
-          <span className="line bLine"></span>
-        </a>
-
+        <button className="button button--one">
+         &lt;Home&#47;&gt;
+        </button>
       </Link>
       <h3>My Works</h3>
       <div className="filter-btns">

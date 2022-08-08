@@ -69,12 +69,9 @@ const Project = () => {
   return (
     <div className="project-detail">
       <Link to="/">
-        <div className="backBtn">
-          <span className="line tLine"></span>
-          <span className="line mLine"></span>
-          <span className="label">Home</span>
-          <span className="line bLine"></span>
-        </div>
+        <button  className="button button--one">
+          &lt;Home&#47;&gt;
+        </button>
       </Link>
 
       <div className="project-container">

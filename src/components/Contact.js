@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({
+      delay: 170,
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div className="contact">
       <div className="contact__line"></div>
@@ -10,7 +18,12 @@ const Contact = () => {
         <span className="tags positioned-bottom">&lt;&#47;h4&gt;</span>
       </h4>
       <div className="contacts">
-        <div className="contact-circle linkedin">
+        <div
+          data-aos-delay="300"
+          data-aos-duration="800"
+          data-aos="fade-up"
+          className="contact-circle linkedin"
+        >
           <a
             href="https://www.linkedin.com/in/fatimakarimli"
             target="_blank"
@@ -23,7 +36,12 @@ const Contact = () => {
           </a>
           <div className="inner-circle"></div>
         </div>
-        <div className="contact-circle github">
+        <div
+          data-aos-delay="50"
+          data-aos-duration="800"
+          data-aos="fade-up"
+          className="contact-circle github"
+        >
           <a
             href="https://github.com/Kerimli98"
             target="_blank"
@@ -36,7 +54,12 @@ const Contact = () => {
           </a>
           <div className="inner-circle"></div>
         </div>
-        <div className="contact-circle gmail">
+        <div
+          data-aos-delay="300"
+          data-aos-duration="800"
+          data-aos="fade-up"
+          className="contact-circle gmail"
+        >
           <a href="mailto:fatimakarimly@gmail.com" className="outer-circle">
             <span>&lt;&gt;</span>
             Gmail
@@ -44,7 +67,12 @@ const Contact = () => {
           </a>
           <div className="inner-circle"></div>
         </div>
-        <div className="contact-circle instagram">
+        <div
+          data-aos-delay="300"
+          data-aos-duration="800"
+          data-aos="fade-up"
+          className="contact-circle instagram"
+        >
           <a
             href="https://www.instagram.com/veistsin/"
             target="_blank"
