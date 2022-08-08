@@ -4,8 +4,14 @@
   margin: 0 auto;
   flex-direction: column;
   position: relative;
-  padding: 5rem 0;
+  button.home-btn {
+    position: absolute;
+    left: 0;
+    top: 2%;
+  }
   .project-container {
+    padding: 5rem 0;
+
     .project-brief {
       height: calc(100vh - 5rem);
       display: grid;
@@ -606,7 +612,6 @@
 }
 @media (max-width: 1076px) {
   .project-detail {
-    padding: 15rem 0;
     .project-container {
       .project-brief {
         grid-template-columns: repeat(auto-fit, minmax(38rem, max-content));
@@ -635,6 +640,8 @@
         }
       }
       .which-languages {
+        margin-top: 5rem;
+
         .languages-left {
           .left-title {
             font-size: 5rem;
@@ -647,7 +654,7 @@
         }
       }
       .project-goal {
-        padding-top: 12rem;
+        padding-top: 15rem;
         .title {
           font-size: 5rem;
           letter-spacing: 6px;
@@ -748,9 +755,12 @@
     width: 92%;
     align-items: center;
     justify-content: center;
-
+    button.home-btn {
+      align-self: flex-start;
+    }
     .project-container {
       .project-brief {
+        padding-top: 8rem;
         &__right {
           .inner {
             height: 35rem;

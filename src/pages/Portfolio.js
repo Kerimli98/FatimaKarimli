@@ -7,11 +7,10 @@ const Portfolio = () => {
   const [category, setCategory] = useState("ALL");
   const [allProjects, setAllProjects] = useState(projects);
   useEffect(() => {
-    AOS.init({
-    });
+    AOS.init({});
     AOS.refresh();
   }, []);
-  window.addEventListener('load', AOS.refresh)
+  window.addEventListener("load", AOS.refresh);
 
   useEffect(() => {
     if (category === "All") {
@@ -54,12 +53,11 @@ const Portfolio = () => {
       setAllProjects(filteredProjects);
     }
   }, [category]);
-  const [itemId, setItemId] = useState(0);
 
   return (
     <div className="projects-page">
       <Link to="/">
-        <button className="button button--one">&lt;Home&#47;&gt;</button>
+        <button className="button button--one home-btn">&lt;Home&#47;&gt;</button>
       </Link>
       <h3>My Works</h3>
       <div className="filter-btns">
@@ -114,33 +112,21 @@ const Portfolio = () => {
           <div
             data-aos="fade-up"
             data-aos-delay="100"
-            className={
-              item.id === itemId && window.innerWidth < 768
-                ? "project-border clicked"
-                : "project-border "
-            }
-            onClick={() => {
-              setItemId(item.id);
-            }}
+            className="project-border"
             key={item.id}
           >
-            <div
-              className={
-                item.id === itemId && window.innerWidth < 768
-                  ? "project clicked"
-                  : "project"
-              }
-            >
-              <div className="overlay"></div>
-              <img className="project__img" src={item.screenshots} alt="" />
+            <div className="project">
+            <img className="project__img" src={item.screenshots} alt="" />
 
-              <div className={"project-content"}>
+              <div className="overlay">
+              <div className="project-content">
                 <p className="project__title">{item.title}</p>
                 <Link to={`/projects/${item.title}`}>
                   <div className="project__btn">
                     View Project <i className="fa-solid fa-angle-right"></i>
                   </div>
                 </Link>
+              </div>
               </div>
             </div>
           </div>

@@ -77,7 +77,7 @@ const Project = () => {
   return (
     <div className="project-detail">
       <Link to="/">
-        <button className="button button--one">&lt;Home&#47;&gt;</button>
+        <button className="button button--one home-btn">&lt;Home&#47;&gt;</button>
       </Link>
 
       <div className="project-container">
