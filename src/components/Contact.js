@@ -14,8 +14,6 @@ const Contact = () => {
       <div className="contact__line"></div>
       <h4
         className="contact__heading"
-        data-aos="fade-up"
-        data-aos-duration="1000"
       >
         <span className="tags positioned-top"> &lt;h4&gt;</span>
         Connect with me
