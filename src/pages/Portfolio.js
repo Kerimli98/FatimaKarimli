@@ -7,9 +7,12 @@ const Portfolio = () => {
   const [category, setCategory] = useState("ALL");
   const [allProjects, setAllProjects] = useState(projects);
   useEffect(() => {
-    AOS.init({});
+    AOS.init({
+    });
     AOS.refresh();
   }, []);
+  window.addEventListener('load', AOS.refresh)
+
   useEffect(() => {
     if (category === "All") {
       setAllProjects(projects);
@@ -109,6 +112,8 @@ const Portfolio = () => {
       <div className="projects">
         {allProjects.map((item) => (
           <div
+            data-aos="fade-up"
+            data-aos-delay="100"
             className={
               item.id === itemId && window.innerWidth < 768
                 ? "project-border clicked"
@@ -120,8 +125,6 @@ const Portfolio = () => {
             key={item.id}
           >
             <div
-              data-aos="fade-up"
-              data-aos-delay="100"
               className={
                 item.id === itemId && window.innerWidth < 768
                   ? "project clicked"
