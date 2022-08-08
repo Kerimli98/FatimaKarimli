@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import projects from "../data";
 import { Link } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Portfolio = () => {
   const [category, setCategory] = useState("ALL");
   const [allProjects, setAllProjects] = useState(projects);
-
+  useEffect(() => {
+    AOS.init({
+    });
+    AOS.refresh();
+  }, []);
   useEffect(() => {
     if (category === "All") {
       setAllProjects(projects);
@@ -52,9 +57,7 @@ const Portfolio = () => {
   return (
     <div className="projects-page">
       <Link to="/">
-        <button className="button button--one">
-         &lt;Home&#47;&gt;
-        </button>
+        <button className="button button--one">&lt;Home&#47;&gt;</button>
       </Link>
       <h3>My Works</h3>
       <div className="filter-btns">
@@ -107,6 +110,8 @@ const Portfolio = () => {
       <div className="projects">
         {allProjects.map((item) => (
           <div
+            data-aos="fade-up"
+            data-aos-delay="100"
             className={
               item.id === itemId && window.innerWidth < 768
                 ? "project-border clicked"

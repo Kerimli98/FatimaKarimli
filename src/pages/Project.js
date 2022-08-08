@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -58,7 +60,13 @@ const Project = () => {
       setIndex(0);
     }
   };
-
+  useEffect(() => {
+    AOS.init({
+      delay: 170,
+      duration: 1000,
+    });
+    AOS.refresh();
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       changeLang();
@@ -69,14 +77,16 @@ const Project = () => {
   return (
     <div className="project-detail">
       <Link to="/">
-        <button  className="button button--one">
-          &lt;Home&#47;&gt;
-        </button>
+        <button className="button button--one">&lt;Home&#47;&gt;</button>
       </Link>
 
       <div className="project-container">
         <section className="project-brief">
-          <div className="project-brief__left">
+          <div
+            className="project-brief__left"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <p className="project-title">{project.title}</p>
             <p className="project-desc">{project.desc}</p>
             <a
@@ -88,7 +98,11 @@ const Project = () => {
               Go to website
             </a>
           </div>
-          <div className="project-brief__right">
+          <div
+            className="project-brief__right"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <div className="inner">
               <div className="inner-figure">
                 <img
@@ -101,7 +115,11 @@ const Project = () => {
           </div>
         </section>
         <section className="which-languages">
-          <div className="languages-left">
+          <div
+            className="languages-left"
+            data-aos="zoom-in-right"
+            data-aos-duration="500"
+          >
             <p className="left-title">
               Which languages <span className="green-text-lang"> I used</span>{" "}
             </p>
@@ -109,7 +127,11 @@ const Project = () => {
               {project.desc}
             </p>
           </div>
-          <div className="languages-right">
+          <div
+            className="languages-right"
+            data-aos="zoom-in-left"
+            data-aos-duration="500"
+          >
             <div className="outerr-circle"></div>
             <div className="dotted-circle">
               <p className="scewed-tag"> &lt;&#47;&gt;</p>
@@ -132,7 +154,11 @@ const Project = () => {
             Project <span className="green-text-lang"> Goal</span>
           </p>
 
-          <div className="goal-container">
+          <div
+            className="goal-container"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
             {updateScreen ? (
               <>
                 <div className="hexagon">

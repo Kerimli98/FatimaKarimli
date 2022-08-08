@@ -66,7 +66,9 @@ const ProjectsSlider = () => {
       <Slider {...settings} ref={sliderRef}>
         {projects.map((item) => (
           <div key={item.id} className="project-slide">
-            <Link data-aos="zoom-in-right"
+            <Link
+              data-aos="zoom-in-right"
+              data-aos-duration="500"
               to={`/projects/${item.title}`}
               className="img-container"
               onMouseEnter={() => setAnimated(() => true)}
@@ -82,7 +84,11 @@ const ProjectsSlider = () => {
               <div className={animated ? "circle animated4" : ""}></div>
             </Link>
 
-            <div className="slide-content" data-aos="zoom-in-left">
+            <div
+              className="slide-content"
+              data-aos="zoom-in-left"
+              data-aos-duration="500"
+            >
               <Link to={`/projects/${item.title}`} className="slide-title">
                 {item.title}
               </Link>

@@ -19,7 +19,6 @@ const Contact = () => {
       </h4>
       <div className="contacts">
         <div
-          data-aos-delay="300"
           data-aos-duration="800"
           data-aos="fade-up"
           className="contact-circle linkedin"
@@ -37,7 +36,6 @@ const Contact = () => {
           <div className="inner-circle"></div>
         </div>
         <div
-          data-aos-delay="50"
           data-aos-duration="800"
           data-aos="fade-up"
           className="contact-circle github"
@@ -55,7 +53,6 @@ const Contact = () => {
           <div className="inner-circle"></div>
         </div>
         <div
-          data-aos-delay="300"
           data-aos-duration="800"
           data-aos="fade-up"
           className="contact-circle gmail"
@@ -68,7 +65,6 @@ const Contact = () => {
           <div className="inner-circle"></div>
         </div>
         <div
-          data-aos-delay="300"
           data-aos-duration="800"
           data-aos="fade-up"
           className="contact-circle instagram"
