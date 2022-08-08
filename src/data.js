@@ -128,7 +128,7 @@ const projects = [
     websitelink: "https://selnet.az/",
     itemRoute: "bidTaxi",
 
-    languages: ["HTML", "CSS", "Javascript"],
+    languages: ["HTML", "CSS", "Vanilla JS"],
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat, expedita laboriosam eveniet amet, assumenda nesciunt laborum cumque ratione quo ullam numquam tenetur fugiat. Quos.",
     goal: "",
     challanges: "",

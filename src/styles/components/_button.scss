@@ -55,7 +55,7 @@ button {
   }
 }
 
-div.backBtn {
+a.backBtn {
   width: 13rem;
   left: 0%;
   top: 3%;
@@ -107,30 +107,57 @@ span.bLine {
   font-size: 2rem;
 }
 
-div.backBtn:hover span.label {
+a.backBtn:hover span.label {
+  left: 2.5rem;
+}
+a.backBtn:active span.label {
   left: 2.5rem;
 }
 
-div.backBtn:hover span.line {
+a.backBtn:hover span.line {
+  left: -1rem;
+  height: 0.5rem;
+  background-color: $color-white;
+}
+a.backBtn:active span.line {
   left: -1rem;
   height: 0.5rem;
   background-color: $color-white;
 }
 
-div.backBtn:hover span.tLine {
+a.backBtn:hover span.tLine {
   width: 2.5rem;
   transform: rotate(-45deg);
   left: -1.5rem;
   top: 1.2rem;
 }
 
-div.backBtn:hover span.mLine {
+a.backBtn:active span.tLine {
+  width: 2.5rem;
+  transform: rotate(-45deg);
+  left: -1.5rem;
+  top: 1.2rem;
+}
+
+a.backBtn:hover span.mLine {
+  opacity: 1;
+  width: 3.5rem;
+  top: 2rem;
+}
+a.backBtn:active span.mLine {
   opacity: 1;
   width: 3.5rem;
   top: 2rem;
 }
 
-div.backBtn:hover span.bLine {
+a.backBtn:hover span.bLine {
+  width: 2.5rem;
+  transform: rotate(45deg);
+  left: -1.5rem;
+  top: 2.8rem;
+}
+
+a.backBtn:active span.bLine {
   width: 2.5rem;
   transform: rotate(45deg);
   left: -1.5rem;
@@ -165,21 +192,21 @@ div.backBtn:hover span.bLine {
 }
 
 @media (max-width: 1100px) {
-  div.backBtn {
+  a.backBtn {
     left: 0%;
     top: 2%;
   }
 }
 
 @media (max-width: 830px) {
-  div.backBtn {
+  a.backBtn {
     left: 0%;
     top: 1%;
   }
   .go-to-btn {
     font-size: 2rem;
     margin-top: 3rem;
-    &::after{
+    &::after {
       width: 13rem;
     }
   }

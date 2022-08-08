@@ -16,9 +16,9 @@ const Portfolio = () => {
       );
       setAllProjects(filteredProjects);
     }
-    if (category === "Javascript") {
+    if (category === "Vanilla JS") {
       const filteredProjects = projects.filter((item) =>
-        item.languages.includes("Javascript")
+        item.languages.includes("Vanilla JS")
       );
       setAllProjects(filteredProjects);
     }
@@ -48,17 +48,20 @@ const Portfolio = () => {
     }
   }, [category]);
   const [itemId, setItemId] = useState(0);
-  console.log(itemId);
-  useEffect(() => {}, [itemId]);
+ 
+  
   return (
     <div className="projects-page">
+
       <Link to="/">
-        <div className="backBtn">
+
+        <a href="/" className="backBtn">
           <span className="line tLine"></span>
           <span className="line mLine"></span>
           <span className="label">Home</span>
           <span className="line bLine"></span>
-        </div>
+        </a>
+
       </Link>
       <h3>My Works</h3>
       <div className="filter-btns">
@@ -89,10 +92,10 @@ const Portfolio = () => {
           SCSS
         </button>
         <button
-          className={category === "Javascript" ? "btn-clicked" : "filter-btn"}
-          onClick={() => setCategory("Javascript")}
+          className={category === "Vanilla JS" ? "btn-clicked" : "filter-btn"}
+          onClick={() => setCategory("Vanilla JS")}
         >
-          Javascript
+          Vanilla JS
         </button>
         <button
           className={category === "React" ? " btn-clicked" : "filter-btn"}

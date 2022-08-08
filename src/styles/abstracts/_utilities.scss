@@ -14,9 +14,10 @@
   top: 50%;
   width: 100%;
 }
-.text-font{
-  font-family: 'Saira', sans-serif;
+.text-font {
+  font-family: "Saira", sans-serif;
   font-size: 3rem;
+  left: 75%;
 }
 .tags.positioned-top {
   position: absolute;
@@ -28,9 +29,6 @@
   right: -5rem;
   bottom: -2rem;
 }
-
-
-
 
 .slick-prev::before,
 .slick-next::before {

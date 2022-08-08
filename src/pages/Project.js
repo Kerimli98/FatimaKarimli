@@ -48,14 +48,23 @@ const Project = () => {
     return () => window.removeEventListener("resize", () => {});
   }, []);
 
-  //   useEffect(() => {
-  //     window.addEventListener("resize", () => {
-  //       if (window.innerWidth < 820) {
-  //         setUpdateScreen(false);
-  //       }
-  //     });
-  //     return () => window.removeEventListener("resize", () => {});
-  //   }, []);
+  const [index, setIndex] = useState(0);
+  const languages = project.languages;
+
+  const changeLang = () => {
+    if (index < languages.length - 1) {
+      setIndex((prevIndex) => prevIndex + 1);
+    } else {
+      setIndex(0);
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeLang();
+    }, 1200);
+    return () => clearInterval(interval);
+  });
 
   return (
     <div className="project-detail">
@@ -113,8 +122,9 @@ const Project = () => {
                 <div className="circle3"></div>
                 <div className="inner-circle"></div>
                 <p className="green-text z-top text-font">
-                  {" "}
-                  &lt; HTML &#47;&gt;
+                  &lt;
+                  {languages[index]}
+                  &#47;&gt;
                 </p>
               </div>
             </div>
