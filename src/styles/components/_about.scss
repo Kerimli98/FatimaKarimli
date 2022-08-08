@@ -26,7 +26,7 @@
         height: 1rem;
         background-color: $color-white;
         border-radius: 50%;
-        box-shadow: 0 0 5px 5px $color-green-light-2;
+        box-shadow: 0 0 5px 5px $color-green-light;
       }
     }
     .line2 {
@@ -57,7 +57,7 @@
         height: 1rem;
         background-color: $color-white;
         border-radius: 50%;
-        box-shadow: 0 0 5px 5px $color-green-light-2;
+        box-shadow: 0 0 5px 5px $color-green-light;
       }
     }
   }
@@ -128,7 +128,7 @@
       &:hover .inner-circle {
         width: 100%;
         height: 100%;
-        background-color: $color-green-light-2;
+        background-color: $color-green-light;
       }
       &:hover .green-text.z-top {
         color: $color-white;

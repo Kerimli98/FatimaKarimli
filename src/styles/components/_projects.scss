@@ -33,13 +33,13 @@
         margin-right: 0;
       }
       &:hover {
-        border: 1px solid $color-green-light-2;
-        color: $color-green-light-2;
+        border: 1px solid $color-green-light;
+        color: $color-green-light;
       }
     }
     .btn-clicked {
-      border: 1px solid $color-green-light-2;
-      color: $color-green-light-2;
+      border: 1px solid $color-green-light;
+      color: $color-green-light;
       border-radius: 5px;
       margin-right: 1.8rem;
       margin-bottom: 1.8rem;
@@ -82,7 +82,7 @@
       );
       transition: all 0.3s ease;
       &:hover {
-        background-color: $color-green-light-2;
+        background-color: $color-green-light;
       }
       .project {
         height: 25rem;
@@ -178,7 +178,7 @@
             font-size: 2rem;
           }
           &:hover {
-            color: $color-green-light-2;
+            color: $color-green-light;
           }
           &:hover i {
             margin-left: 2rem;
@@ -203,7 +203,7 @@
   //       transition: all 0.3s ease;
 
   //       &.clicked {
-  //         background-color: $color-green-light-2;
+  //         background-color: $color-green-light;
   //       }
   //       .project {
   //         .project-content {

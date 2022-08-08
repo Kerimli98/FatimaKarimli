@@ -38,7 +38,7 @@
       &__right {
         .inner {
           height: 57rem;
-          background-color: $color-green-light-2;
+          background-color: $color-green-light;
           clip-path: polygon(
             5% 10%,
             5% 30%,
@@ -133,7 +133,7 @@
           flex-wrap: wrap;
           .green-text-lang {
             font-size: 7rem;
-            color: $color-green-light-2;
+            color: $color-green-light;
           }
         }
         .lang-details {
@@ -165,7 +165,7 @@
           position: absolute;
           width: 40rem;
           height: 40rem;
-          border-color: $color-green-light-2;
+          border-color: $color-green-light;
           background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='400' ry='400' stroke='rgb(118,169,136)' stroke-width='3' stroke-dasharray='5%25%2c 9%25' stroke-dashoffset='86' stroke-linecap='square'/%3e%3c/svg%3e");
           border-radius: 100px;
           display: flex;
@@ -212,7 +212,7 @@
           &:hover .inner-circle {
             width: 100%;
             height: 100%;
-            background-color: $color-green-light-2;
+            background-color: $color-green-light;
           }
           &:hover .green-text.z-top {
             color: $color-white;
@@ -348,7 +348,7 @@
         .green-text-lang {
           font-size: 7rem;
           margin-left: 2rem;
-          color: $color-green-light-2;
+          color: $color-green-light;
         }
       }
       .goal-container {
@@ -358,7 +358,7 @@
         left: 14%;
         top: 0%;
         .hexagon {
-          background-color: $color-green-light-2;
+          background-color: $color-green-light;
           position: absolute;
           transform: translate(-50%, -50%);
           z-index: 2;
@@ -375,7 +375,7 @@
             50% 0%
           );
           .inner-hexagon {
-            background-color: $color-green-dark;
+            background-color: $color-figure-dark;
             display: flex;
             position: relative;
             transform: translate(-50%, -50%);
@@ -394,7 +394,7 @@
               50% 0%
             );
             .inner-inner-hex {
-              background-color: $color-green-light-2;
+              background-color: $color-green-light;
               display: flex;
               width: 13rem;
               height: 13rem;
@@ -409,7 +409,7 @@
                 50% 0%
               );
               .deep-hex {
-                background-color: $color-green-dark;
+                background-color: $color-figure-dark;
                 display: flex;
                 width: 12rem;
                 height: 12rem;
@@ -463,7 +463,7 @@
             transform: translate(-50%, -50%);
             top: 50%;
             left: 50%;
-            background-color: $color-green-dark;
+            background-color: $color-figure-dark;
             height: 48rem;
             width: 98%;
             display: flex;
