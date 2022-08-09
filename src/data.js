@@ -254,9 +254,9 @@ const projects = [
     title: "Selnet",
     websitelink: "https://selnet.az/",
 
-    languages: ["HTML", "CSS", "Vanilla JS"],
+    languages: ["HTML", "CSS", "Vanilla JS", "Jquery"],
     langDetails: [
-      "Built by using HTML, CSS and Javascript",
+      "Built by using HTML, CSS, Javascript and Jquery",
       "Responsive web design",
       "Use of CSS Grid, Flexbox, slick-slider",
       "Use of Google API",

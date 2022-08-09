@@ -52,6 +52,12 @@ const Portfolio = () => {
       );
       setAllProjects(filteredProjects);
     }
+    if (category === "Jquery") {
+      const filteredProjects = projects.filter((item) =>
+        item.languages.includes("Jquery")
+      );
+      setAllProjects(filteredProjects);
+    }
   }, [category]);
 
   return (
@@ -92,6 +98,12 @@ const Portfolio = () => {
           onClick={() => setCategory("Vanilla JS")}
         >
           Vanilla JS
+        </button>
+        <button
+          className={category === "Jquery" ? "btn-clicked" : "filter-btn"}
+          onClick={() => setCategory("Jquery")}
+        >
+          Jquery
         </button>
         <button
           className={category === "React" ? " btn-clicked" : "filter-btn"}
