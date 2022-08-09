@@ -107,11 +107,7 @@ const Project = () => {
           >
             <div className="inner">
               <div className="inner-figure">
-                <img
-                  src="/assets/images/eazypizz.png"
-                  alt=""
-                  className="inner-image"
-                />
+                <img src={project.screenshots} alt="" className="inner-image" />
               </div>
             </div>
           </div>
@@ -123,10 +119,15 @@ const Project = () => {
             data-aos-duration="500"
           >
             <p className="left-title">
-              Which languages <span className="green-text-lang"> I used</span>{" "}
+              Which technologies
+              <span className="green-text-lang"> I used</span>
             </p>
             <p className="lang-details" key={project.id}>
-              {project.desc}
+              <ul>
+                {project.langDetails.map((desc) => (
+                  <li>{desc}</li>
+                ))}
+              </ul>
             </p>
           </div>
           <div
@@ -139,8 +140,8 @@ const Project = () => {
               <p className="scewed-tag"> &lt;&#47;&gt;</p>
               <div className="outer-circle">
                 <div className="circle1"></div>
-                <div className="circle2"></div>
-                <div className="circle3"></div>
+                 <div className="circle2"></div>
+               <div className="circle3"></div>
                 <div className="inner-circle"></div>
                 <p className="green-text z-top text-font">
                   &lt;
@@ -153,7 +154,7 @@ const Project = () => {
         </section>
         <section className="project-goal">
           <p className="title" data-aos="fade-up" data-aos-duration="1000">
-            Project <span className="green-text-lang"> Goal</span>
+            Project <span className="green-text-lang"> Goal </span> and <span className="green-text-lang">Features</span>
           </p>
 
           <div
