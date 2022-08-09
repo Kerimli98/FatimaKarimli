@@ -48,11 +48,10 @@ const About = () => {
             <div className="circle3"></div>
             <div className="inner-circle"></div>
             <a
-              href="/assets/images/bid.png"
+              href="/CV.pdf"
               download
               className="green-text z-top"
             >
-              {" "}
               &lt;Download CV&#47;&gt;
             </a>
           </div>
