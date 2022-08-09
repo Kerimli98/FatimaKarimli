@@ -1,7 +1,7 @@
 const projects = [
   {
     id: "01",
-    title: "BidTaxi",
+    title: "Bid gitTaxi",
     websitelink: "https:/bidtaxi.az/",
     languages: ["React", "CSS"],
     langDetails: [
