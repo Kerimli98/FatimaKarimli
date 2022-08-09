@@ -105,7 +105,7 @@ const Project = () => {
             <a
               href={project.websitelink}
               rel="noreferrer"
-              target="_black"
+              target="_blank"
               className="go-to-btn"
             >
               Go to website
