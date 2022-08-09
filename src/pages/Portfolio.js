@@ -116,7 +116,7 @@ const Portfolio = () => {
             key={item.id}
           >
             <div className="project">
-            <img className="project__img" src={item.screenshots} alt="" />
+            <img className="project__img" src={item.screenshot2} alt="" />
 
               <div className="overlay">
               <div className="project-content">

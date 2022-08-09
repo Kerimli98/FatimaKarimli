@@ -41,11 +41,22 @@ const Project = () => {
   const [updateScreen, setUpdateScreen] = useState(
     window.innerWidth > 820 ? true : false
   );
+  const [updateScreen2, setUpdateScreen2] = useState(
+    window.innerWidth > 556 ? true : false
+  );
   useEffect(() => {
     window.addEventListener("resize", () => {
       if (window.innerWidth > 820) {
         setUpdateScreen(true);
       } else setUpdateScreen(false);
+    });
+    return () => window.removeEventListener("resize", () => {});
+  }, []);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 556) {
+        setUpdateScreen2(true);
+      } else setUpdateScreen2(false);
     });
     return () => window.removeEventListener("resize", () => {});
   }, []);
@@ -107,7 +118,13 @@ const Project = () => {
           >
             <div className="inner">
               <div className="inner-figure">
-                <img src={project.screenshots} alt="" className="inner-image" />
+                <img
+                  src={
+                    updateScreen2 ? project.screenshot1 : project.screenshot2
+                  }
+                  alt=""
+                  className="inner-image"
+                />
               </div>
             </div>
           </div>
@@ -140,8 +157,8 @@ const Project = () => {
               <p className="scewed-tag"> &lt;&#47;&gt;</p>
               <div className="outer-circle">
                 <div className="circle1"></div>
-                 <div className="circle2"></div>
-               <div className="circle3"></div>
+                <div className="circle2"></div>
+                <div className="circle3"></div>
                 <div className="inner-circle"></div>
                 <p className="green-text z-top text-font">
                   &lt;
@@ -154,7 +171,8 @@ const Project = () => {
         </section>
         <section className="project-goal">
           <p className="title" data-aos="fade-up" data-aos-duration="1000">
-            Project <span className="green-text-lang"> Goal </span> and <span className="green-text-lang">Features</span>
+            Project <span className="green-text-lang"> Goal </span> and{" "}
+            <span className="green-text-lang">Features</span>
           </p>
 
           <div

@@ -79,7 +79,7 @@ const ProjectsSlider = () => {
               onAnimationEnd={() => setAnimated(() => false)}
             >
               <div className="svg-box">
-                <img src={item.screenshots} alt="" />
+                <img src={item.screenshot3} alt="" />
               </div>
 
               <div className={animated ? "circle animated1" : ""}></div>

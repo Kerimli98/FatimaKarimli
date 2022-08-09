@@ -28,7 +28,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/bid.png",
+    screenshot1: "/assets/images/bid.png",
+    screenshot2: "/assets/images/bid2.png",
+    screenshot3: "/assets/images/bid3.png",
   },
   {
     id: "02",
@@ -73,7 +75,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/naringi.png",
+    screenshot1: "/assets/images/naringi2.png",
+    screenshot2: "/assets/images/naringi.png",
+    screenshot3: "/assets/images/naringi3.png",
   },
 
   {
@@ -97,7 +101,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/esayar.png",
+    screenshot1: "/assets/images/esayar2.png",
+    screenshot2: "/assets/images/esayarr.png",
+    screenshot3: "/assets/images/esayar3.png",
   },
   {
     id: "04",
@@ -119,7 +125,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/fatima.png",
+    screenshot1: "/assets/images/portfolio2.png",
+    screenshot2: "/assets/images/portfolio.png",
+    screenshot3: "/assets/images/portfolio3.png",
   },
 
   {
@@ -132,12 +140,12 @@ const projects = [
       "Modern minimalist responsive UI using Reactstrap",
       "Use of tools like React Hooks, React-slick, React-paginate, Redux Toolkit",
     ],
-    desc: "Simple e-commerce website - Food Delivery App",
+    desc: "Simple e-commerce website - Food Delivery App  for ordering food online",
     goal: [
       {
         id: 1,
         goalName: "Food Delivery App",
-        goalDesc: "Simple e-commerce website - Food Delivery App",
+        goalDesc: "Simple e-commerce website - Food Delivery App for ordering food online",
       },
       {
         id: 2,
@@ -148,7 +156,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/eazypizz.png",
+    screenshot1: "/assets/images/eazypizz2.png",
+    screenshot2: "/assets/images/eazypizz.png",
+    screenshot3: "/assets/images/eazypizz3.png",
   },
 
   {
@@ -161,12 +171,12 @@ const projects = [
       "Responsive web design",
       "Use of CSS Grid, Flexbox",
     ],
-    desc: "A creative web page for booking tours",
+    desc: "A creative web page for finding adventurous tours in nature",
     goal: [
       {
         id: 1,
         goalName: "Responsiveness",
-        goalDesc: "Modern one-page app, responsive web design;",
+        goalDesc: "Modern single-page app, responsive web design",
       },
       {
         id: 2,
@@ -176,7 +186,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/natours.png",
+    screenshot1: "/assets/images/natours2.png",
+    screenshot2: "/assets/images/natours.png",
+    screenshot3: "/assets/images/natours3.png",
   },
   {
     id: "07",
@@ -188,7 +200,7 @@ const projects = [
       "Responsive web design",
       "Use of CSS Grid, Flexbox",
     ],
-    desc: "A creative web page for renting apartments and villas",
+    desc: "A creative real estate platform for finding apartments and villas",
     goal: [
       {
         id: 1,
@@ -203,7 +215,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/nexter.png",
+    screenshot1: "/assets/images/nexter2.png",
+    screenshot2: "/assets/images/nexter.png",
+    screenshot3: "/assets/images/nexter3.png",
   },
   {
     id: "08",
@@ -230,7 +244,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/trillo.png",
+    screenshot1: "/assets/images/trillo2.png",
+    screenshot2: "/assets/images/trillo.png",
+    screenshot3: "/assets/images/trillo3.png",
   },
 
   {
@@ -256,7 +272,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/selnet.png",
+    screenshot1: "/assets/images/selnet2.png",
+    screenshot2: "/assets/images/selnet.png",
+    screenshot3: "/assets/images/selnet3.png",
   },
 
   {
@@ -280,7 +298,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshots: "/assets/images/currency.png",
+    screenshot1: "/assets/images/currency.png",
+    screenshot2: "/assets/images/currency.png",
+    screenshot3: "/assets/images/currency.png",
   },
 ];
 export default projects;

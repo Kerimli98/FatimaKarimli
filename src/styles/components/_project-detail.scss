@@ -13,7 +13,7 @@
     padding: 5rem 0;
 
     .project-brief {
-      height: calc(100vh - 5rem);
+      height: calc(100vh - 6rem);
       display: grid;
       align-items: center;
       grid-template-columns: repeat(auto-fit, minmax(45rem, max-content));
@@ -121,6 +121,7 @@
       align-items: center;
       grid-template-columns: repeat(auto-fit, minmax(40rem, max-content));
       gap: 8rem;
+      padding-top: 8rem;
       .languages-left {
         .left-title {
           font-family: mainFont;
