@@ -2,7 +2,7 @@ const projects = [
   {
     id: "01",
     title: "Bid",
-    websitelink: "https:/bidtaxi.az/",
+    websitelink: "http:/bidtaxi.az/",
     languages: ["React", "CSS"],
     langDetails: [
       "Done in ReactJS, as fully stand-alone frontend application",
