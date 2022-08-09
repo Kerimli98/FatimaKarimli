@@ -28,7 +28,6 @@
 @media screen and (max-width: 524px) {
 
       .navbar {
-        // background-color: red;
         height: 10vh;
         width: 95%;
         justify-content: space-around;
@@ -40,4 +39,17 @@
    
         }
       }
+}
+@media screen and (max-width: 390px) {
+
+  .navbar {
+    width: 92%;
+    margin-top: 1rem;
+    justify-content: space-between;
+
+  
+    &__logo {
+      font-size: 3rem;
+    }
+  }
 }

@@ -6,7 +6,7 @@ const Header = () => {
       <nav className="navbar">
         <Link to="/">
           <button className="button button--one">
-            &#47;&#47;01. &lt;Home&#47;&gt;
+           01. &lt;Home&#47;&gt;
           </button>
         </Link>
         <Link to="/">
@@ -14,7 +14,7 @@ const Header = () => {
         </Link>
         <Link to="/projects">
           <button className="button button--one">
-            &#47;&#47;02. &lt;Portfolio&#47;&gt;
+           02. &lt;Portfolio&#47;&gt;
           </button>
         </Link>
       </nav>
