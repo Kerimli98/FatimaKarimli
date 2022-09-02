@@ -145,7 +145,8 @@ const projects = [
       {
         id: 1,
         goalName: "Food Delivery App",
-        goalDesc: "Simple e-commerce website - Food Delivery App for ordering food online",
+        goalDesc:
+          "Simple e-commerce website - Food Delivery App for ordering food online",
       },
       {
         id: 2,
@@ -301,6 +302,44 @@ const projects = [
     screenshot1: "/assets/images/currency.png",
     screenshot2: "/assets/images/currency.png",
     screenshot3: "/assets/images/currency.png",
+  },
+
+  {
+    id: "11",
+    title: "Ecotourizm",
+    websitelink: "https://ecotourizm.com/en",
+
+    languages: ["Next", "Redux", "Typescript", "SCSS"],
+    desc: "Online Tours and Shopping platform to find local guides, countryside houses and organic foods as well",
+    langDetails: [
+      "Done in NextJS and state management in Redux Toolkit",
+      "Responsive web design",
+      "Register and Login forms, Form Validations",
+      "Use of tools like React Hooks, React-scroll, React-select, React-toastify",
+    ],
+    goal: [
+      {
+        id: 1,
+        goalName: "Register / Login",
+        goalDesc:
+          "Create your account whether you are someone who provides tours or sells organic foods or you need tours and organic stuff",
+      },
+      {
+        id: 2,
+        goalName: "Find/Provides tours",
+        goalDesc: "You can find or provide tours easily in the application",
+      },
+      {
+        id: 3,
+        goalName: "Sell/Buy products",
+        goalDesc: "You can sell/buy organic products in the application",
+      },
+    ],
+    challanges: "",
+    solution: "",
+    screenshot1: "",
+    screenshot2: "",
+    screenshot3: "",
   },
 ];
 export default projects;

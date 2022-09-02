@@ -58,12 +58,26 @@ const Portfolio = () => {
       );
       setAllProjects(filteredProjects);
     }
+    if (category === "Next") {
+      const filteredProjects = projects.filter((item) =>
+        item.languages.includes("Next")
+      );
+      setAllProjects(filteredProjects);
+    }
+    if (category === "Typescript") {
+      const filteredProjects = projects.filter((item) =>
+        item.languages.includes("Typescript")
+      );
+      setAllProjects(filteredProjects);
+    }
   }, [category]);
 
   return (
     <div className="projects-page">
       <Link to="/">
-        <button className="button button--one home-btn">&lt;Home&#47;&gt;</button>
+        <button className="button button--one home-btn">
+          &lt;Home&#47;&gt;
+        </button>
       </Link>
       <h3>My Works</h3>
       <div className="filter-btns">
@@ -73,14 +87,12 @@ const Portfolio = () => {
         >
           All
         </button>
-
         <button
           className={category === "HTML" ? "btn-clicked" : "filter-btn"}
           onClick={() => setCategory("HTML")}
         >
           HTML
         </button>
-
         <button
           className={category === "CSS" ? "btn-clicked" : "filter-btn"}
           onClick={() => setCategory("CSS")}
@@ -111,12 +123,23 @@ const Portfolio = () => {
         >
           React
         </button>
-
         <button
           className={category === "Redux" ? "btn-clicked" : "filter-btn"}
           onClick={() => setCategory("Redux")}
         >
           Redux
+        </button>
+        <button
+          className={category === "Next" ? "btn-clicked" : "filter-btn"}
+          onClick={() => setCategory("Next")}
+        >
+          Next
+        </button>
+        <button
+          className={category === "Typescript" ? "btn-clicked" : "filter-btn"}
+          onClick={() => setCategory("Typescript")}
+        >
+          Typescript
         </button>
       </div>
       <div className="projects">
@@ -128,17 +151,17 @@ const Portfolio = () => {
             key={item.id}
           >
             <div className="project">
-            <img className="project__img" src={item.screenshot2} alt="" />
+              <img className="project__img" src={item.screenshot2} alt="" />
 
               <div className="overlay">
-              <div className="project-content">
-                <p className="project__title">{item.title}</p>
-                <Link to={`/projects/${item.title}`}>
-                  <div className="project__btn">
-                    View Project <i className="fa-solid fa-angle-right"></i>
-                  </div>
-                </Link>
-              </div>
+                <div className="project-content">
+                  <p className="project__title">{item.title}</p>
+                  <Link to={`/projects/${item.title}`}>
+                    <div className="project__btn">
+                      View Project <i className="fa-solid fa-angle-right"></i>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
