@@ -82,13 +82,14 @@ const projects = [
   {
     id: "11",
     title: "Ecotourizm",
-    websitelink: "https://ecotourizm.com/en",
+    websitelink: "https://www.greentravel.az/en",
 
     languages: ["Next", "Redux", "Typescript", "SCSS"],
     desc: "Online Tours and Shopping platform to find local guides, countryside houses and organic foods as well",
     langDetails: [
       "Done in NextJS and state management in Redux Toolkit",
       "Responsive web design",
+      "Available in multi-languages",
       "Register and Login forms, Form Validations",
       "Use of tools like React Hooks, React-scroll, React-select, React-toastify",
     ],
