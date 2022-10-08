@@ -11,7 +11,7 @@ const projects = [
       "Register form, Form Validations",
       "Use of tools like React Hooks, React-slick, React-scroll, React-select, React-toastify",
     ],
-    desc: "Introductory company website for the Bid Taxi mobile app which helps users to get information about the taxi app and its advantages and features",
+    desc: "Company website for the Bid Taxi mobile app which helps users to get information about the taxi app and its advantages and features",
     goal: [
       {
         id: 1,
@@ -90,7 +90,7 @@ const projects = [
       "Responsive web design",
       "Use of tools like React Hooks, Framer-Motion, React-Scroll-Motion",
     ],
-    desc: "Introductory company website for E-SAYAR which helps users to get information about the company, its advantages and features",
+    desc: "Company website for E-SAYAR which helps users to get information about the company, its advantages and features",
     goal: [
       {
         id: 1,
@@ -337,9 +337,9 @@ const projects = [
     ],
     challanges: "",
     solution: "",
-    screenshot1: "",
-    screenshot2: "",
-    screenshot3: "",
+    screenshot1: "/assets/images/greentravel2.png",
+    screenshot2: "/assets/images/greentravel.png",
+    screenshot3: "/assets/images/greentravel3.png",
   },
 ];
 export default projects;
