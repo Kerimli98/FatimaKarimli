@@ -11,7 +11,7 @@ const projects = [
       "Register form, Form Validations",
       "Use of tools like React Hooks, React-slick, React-scroll, React-select, React-toastify",
     ],
-    desc: "Company website for the Bid Taxi mobile app which helps users to get information about the taxi app and its advantages and features",
+    desc: "Company website for the Bid Taxi mobile app which helps users to get information about the taxi app, its advantages and features",
     goal: [
       {
         id: 1,
@@ -79,7 +79,43 @@ const projects = [
     screenshot2: "/assets/images/naringi.png",
     screenshot3: "/assets/images/naringi3.png",
   },
+  {
+    id: "11",
+    title: "Ecotourizm",
+    websitelink: "https://ecotourizm.com/en",
 
+    languages: ["Next", "Redux", "Typescript", "SCSS"],
+    desc: "Online Tours and Shopping platform to find local guides, countryside houses and organic foods as well",
+    langDetails: [
+      "Done in NextJS and state management in Redux Toolkit",
+      "Responsive web design",
+      "Register and Login forms, Form Validations",
+      "Use of tools like React Hooks, React-scroll, React-select, React-toastify",
+    ],
+    goal: [
+      {
+        id: 1,
+        goalName: "Register / Login",
+        goalDesc:
+          "Create your account whether you are someone who provides tours or sells organic foods or you need tours and organic stuff",
+      },
+      {
+        id: 2,
+        goalName: "Find/Provides tours",
+        goalDesc: "You can find or provide tours easily in the application",
+      },
+      {
+        id: 3,
+        goalName: "Sell/Buy products",
+        goalDesc: "You can sell/buy organic products in the application",
+      },
+    ],
+    challanges: "",
+    solution: "",
+    screenshot1: "/assets/images/greentravel2.png",
+    screenshot2: "/assets/images/greentravel.png",
+    screenshot3: "/assets/images/greentravel3.png",
+  },
   {
     id: "03",
     title: "E-SAYAR",
@@ -302,44 +338,6 @@ const projects = [
     screenshot1: "/assets/images/currency.png",
     screenshot2: "/assets/images/currency.png",
     screenshot3: "/assets/images/currency.png",
-  },
-
-  {
-    id: "11",
-    title: "Ecotourizm",
-    websitelink: "https://ecotourizm.com/en",
-
-    languages: ["Next", "Redux", "Typescript", "SCSS"],
-    desc: "Online Tours and Shopping platform to find local guides, countryside houses and organic foods as well",
-    langDetails: [
-      "Done in NextJS and state management in Redux Toolkit",
-      "Responsive web design",
-      "Register and Login forms, Form Validations",
-      "Use of tools like React Hooks, React-scroll, React-select, React-toastify",
-    ],
-    goal: [
-      {
-        id: 1,
-        goalName: "Register / Login",
-        goalDesc:
-          "Create your account whether you are someone who provides tours or sells organic foods or you need tours and organic stuff",
-      },
-      {
-        id: 2,
-        goalName: "Find/Provides tours",
-        goalDesc: "You can find or provide tours easily in the application",
-      },
-      {
-        id: 3,
-        goalName: "Sell/Buy products",
-        goalDesc: "You can sell/buy organic products in the application",
-      },
-    ],
-    challanges: "",
-    solution: "",
-    screenshot1: "/assets/images/greentravel2.png",
-    screenshot2: "/assets/images/greentravel.png",
-    screenshot3: "/assets/images/greentravel3.png",
   },
 ];
 export default projects;
