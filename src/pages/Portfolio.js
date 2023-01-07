@@ -1,76 +1,76 @@
 import React, { useEffect, useState } from "react";
-import projects from "../data";
+// import projects from "../data";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Portfolio = () => {
   const [category, setCategory] = useState("ALL");
-  const [allProjects, setAllProjects] = useState(projects);
+  // const [allProjects, setAllProjects] = useState(projects);
   useEffect(() => {
     AOS.init({});
     AOS.refresh();
   }, []);
   window.addEventListener("load", AOS.refresh);
 
-  useEffect(() => {
-    if (category === "All") {
-      setAllProjects(projects);
-    }
-    if (category === "React") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("React")
-      );
-      setAllProjects(filteredProjects);
-    }
-    if (category === "Vanilla JS") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("Vanilla JS")
-      );
-      setAllProjects(filteredProjects);
-    }
-    if (category === "HTML") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("HTML")
-      );
-      setAllProjects(filteredProjects);
-    }
-    if (category === "CSS") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("CSS")
-      );
-      setAllProjects(filteredProjects);
-    }
-    if (category === "SCSS") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("SCSS")
-      );
-      setAllProjects(filteredProjects);
-    }
-    if (category === "Redux") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("Redux")
-      );
-      setAllProjects(filteredProjects);
-    }
-    if (category === "Jquery") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("Jquery")
-      );
-      setAllProjects(filteredProjects);
-    }
-    if (category === "Next") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("Next")
-      );
-      setAllProjects(filteredProjects);
-    }
-    if (category === "Typescript") {
-      const filteredProjects = projects.filter((item) =>
-        item.languages.includes("Typescript")
-      );
-      setAllProjects(filteredProjects);
-    }
-  }, [category]);
+  // useEffect(() => {
+  //   if (category === "All") {
+  //     setAllProjects(projects);
+  //   }
+  //   if (category === "React") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("React")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  //   if (category === "Vanilla JS") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("Vanilla JS")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  //   if (category === "HTML") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("HTML")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  //   if (category === "CSS") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("CSS")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  //   if (category === "SCSS") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("SCSS")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  //   if (category === "Redux") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("Redux")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  //   if (category === "Jquery") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("Jquery")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  //   if (category === "Next") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("Next")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  //   if (category === "Typescript") {
+  //     const filteredProjects = projects.filter((item) =>
+  //       item.languages.includes("Typescript")
+  //     );
+  //     setAllProjects(filteredProjects);
+  //   }
+  // }, [category]);
 
   return (
     <div className="projects-page">
