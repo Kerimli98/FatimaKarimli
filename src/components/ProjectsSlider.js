@@ -59,16 +59,16 @@ const ProjectsSlider = () => {
         My Portfolio
         <span className="tags positioned-bottom">&lt;&#47;h2&gt;</span>
       </h2>
-      <input
+      {/* <input
         onChange={(e) => sliderRef.current.slickGoTo(e.target.value)}
         value={slideIndex + 1}
         type="range"
         min={0}
         max={projects.length}
-      />
+      /> */}
 
       <Slider {...settings} ref={sliderRef}>
-        {projects.map((item) => (
+        {/* {projects.map((item) => (
           <div key={item.id} className="project-slide">
             <Link
               data-aos="zoom-in-right"
@@ -99,13 +99,14 @@ const ProjectsSlider = () => {
               <p className="slide-desc">{item.desc}</p>
             </div>
           </div>
-        ))}
+        ))} */}
+        <div>under construction</div>
       </Slider>
-      <div className="progressbar">
+      {/* <div className="progressbar">
         {[...Array(n)].map((elem, i) => (
           <div key={i} className="progress"></div>
         ))}
-      </div>
+      </div> */}
       <Link to="/projects" className="btn-slider">
         <button style={{ letterSpacing: "0" }} className="button button--one ">
           &lt; See All &#47;&gt;
