@@ -143,7 +143,7 @@ const Portfolio = () => {
         </button>
       </div>
       <div className="projects">
-        {allProjects.map((item) => (
+        {/* {allProjects.map((item) => (
           <div
             data-aos="fade-up"
             data-aos-delay="100"
@@ -165,7 +165,10 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-        ))}
+        ))} */}
+        <p style={{ color: "white", fontSize: "50px", marginTop: "50px" }}>
+          under construction
+        </p>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Header />
       <About />
-      <Slider />
+      {/* <Slider /> */}
       <Contact />
     </div>
   );
