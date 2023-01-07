@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import projects from "../data";
+// import projects from "../data";
 const PreviousBtn = (props) => {
   const { className, onClick } = props;
   return (
@@ -34,7 +34,7 @@ const ProjectsSlider = () => {
     });
     AOS.refresh();
   }, []);
-  const [slideIndex, setSlideIndex] = useState(0);
+  // const [slideIndex, setSlideIndex] = useState(0);
   const [updateCount, setUpdateCount] = useState(0);
   const settings = {
     dots: false,
@@ -42,12 +42,12 @@ const ProjectsSlider = () => {
     nextArrow: <NextBtn />,
     dotsClass: "slick-dots custom-indicator",
     afterChange: () => setUpdateCount(updateCount + 1),
-    beforeChange: (current, next) => setSlideIndex(next),
+    // beforeChange: (current, next) => setSlideIndex(next),
   };
 
   const sliderRef = useRef();
-  const n = slideIndex + 1;
-  const [animated, setAnimated] = useState(false);
+  // const n = slideIndex + 1;
+  // const [animated, setAnimated] = useState(false);
   return (
     <div className="project-slider">
       <h2
