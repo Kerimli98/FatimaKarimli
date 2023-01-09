@@ -1,22 +1,47 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion, useScroll, useSpring } from "framer-motion";
+
 const About = () => {
+  const [end, setEnd] = useState(0);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 150,
+    damping: 30,
+    restDelta: 0.001,
+  });
   useEffect(() => {
-    AOS.init({
-      delay: 170,
+    return scrollYProgress.onChange((latest) => {
+      setEnd(latest);
     });
-    AOS.refresh();
   }, []);
+  console.log(end);
   return (
     <section className="about">
-      <div className="curvy-line">
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-        <div className="line4"></div>
-      </div>
-      <div className="about__container">
+      {end > 0 ? (
+        <a href="#about">
+          <div className="start">
+            <span>About</span>
+          </div>
+        </a>
+      ) : null}
+      <motion.div className="progress-bar" style={{ scaleY: scaleX }} />
+      {end > 0.4 ? (
+        <a href="#portfolio">
+          <div className="middle">
+            <span>Portfolio</span>
+          </div>
+        </a>
+      ) : null}
+      {end > 0.95 ? (
+        <a href="#contact">
+          <div className="end">
+            <span>Contact</span>
+          </div>
+        </a>
+      ) : null}
+
+      <div className="about__container" id="about">
         <div className="about__left">
           <p className="green-text mt">
             <span className="tags"> &lt;p&gt;</span>This is

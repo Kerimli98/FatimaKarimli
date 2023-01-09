@@ -1,5 +1,4 @@
 import Layout from "./pages/Layout";
-
 import "./styles/main.scss";
 function App() {
   return (

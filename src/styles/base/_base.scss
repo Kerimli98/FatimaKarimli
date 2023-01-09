@@ -38,6 +38,14 @@ li {
 
 body {
   box-sizing: border-box;
-   background-color: $color-main-bg;
-
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.App .sections {
+  scroll-behavior: smooth;
+  background-color: $color-main-bg;
+}
+.App::-webkit-scrollbar {
+  display: none;
 }

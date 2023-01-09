@@ -5,61 +5,43 @@
   font-family: "Saira", sans-serif;
   position: relative;
   overflow: hidden;
-  .curvy-line {
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 35%;
-    left: 2%;
-    display: inline-block;
-    .line1 {
-      width: 10rem;
-      height: 2px;
-      background-color: $color-green-light;
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: -5px;
-        width: 1rem;
-        height: 1rem;
-        background-color: $color-white;
-        border-radius: 50%;
-        box-shadow: 0 0 5px 5px $color-green-light;
-      }
-    }
-    .line2 {
-      height: 36rem;
-      width: 2px;
-      background-color: $color-green-light;
-      border-radius: 50%/100px 100px 0 0;
-    }
+  .start,
+  .end,
+  .middle {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px $color-green-light;
+    left: 1.7rem;
 
-    .line3 {
-      width: 45vw;
-      height: 2px;
-      background-color: $color-green-light;
-      border-radius: 50%/100px 100px 0 0;
+    span {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
     }
-    .line4 {
-      position: absolute;
-      left: 99.8%;
-      height: 12rem;
-      width: 2px;
-      background-color: $color-green-light;
-      &::after {
-        content: "";
-        position: absolute;
-        left: -5px;
-        bottom: -5px;
-        width: 1rem;
-        height: 1rem;
-        background-color: $color-white;
-        border-radius: 50%;
-        box-shadow: 0 0 5px 5px $color-green-light;
-      }
-    }
+  }
+  .start {
+    top: 10%;
+  }
+  .middle {
+    top: 47.5%;
+  }
+  .end {
+    bottom: 10%;
+  }
+  .progress-bar {
+    position: fixed;
+    top: 10.8%;
+    left: 2rem;
+    bottom: 10.8%;
+    width: 2px;
+    background: $color-green-light;
+    transform-origin: 0% 0%;
   }
   &__container {
     width: 82%;
@@ -251,7 +233,16 @@
   font-size: 2rem;
   font-weight: 300;
 }
-
+@media screen and (max-width: 1024px) {
+  .about {
+    .start,
+    .end,
+    .middle,
+    .progress-bar {
+      display: none;
+    }
+  }
+}
 @media screen and (max-width: 900px) {
   .about {
     padding: 0 0 15rem 0;
@@ -307,4 +298,3 @@
     }
   }
 }
-

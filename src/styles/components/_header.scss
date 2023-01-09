@@ -18,36 +18,39 @@
 
   &__logo {
     font-family: mainFont;
-    font-size: 6rem;
-    font-weight: 800;
-    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
     color: $color-white;
+    span {
+      &:last-child {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 
 @media screen and (max-width: 524px) {
+  .navbar {
+    height: 10vh;
+    width: 95%;
+    justify-content: space-around;
 
-      .navbar {
-        height: 10vh;
-        width: 95%;
-        justify-content: space-around;
-
-      
-        &__logo {
-          font-size: 3.5rem;
-          font-weight: 600;
-   
-        }
-      }
+    &__logo {
+      font-size: 3.5rem;
+      font-weight: 600;
+    }
+  }
 }
 @media screen and (max-width: 390px) {
-
   .navbar {
     width: 92%;
     margin-top: 1rem;
     justify-content: space-between;
 
-  
     &__logo {
       font-size: 3rem;
     }

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 // import projects from "../data";
 import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 const Portfolio = () => {
   const [category, setCategory] = useState("ALL");
   // const [allProjects, setAllProjects] = useState(projects);
-  useEffect(() => {
-    AOS.init({});
-    AOS.refresh();
-  }, []);
-  window.addEventListener("load", AOS.refresh);
+  // useEffect(() => {
+  //   AOS.init({});
+  //   AOS.refresh();
+  // }, []);
+  // window.addEventListener("load", AOS.refresh);
 
   // useEffect(() => {
   //   if (category === "All") {

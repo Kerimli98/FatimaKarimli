@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -71,13 +71,13 @@ const Project = () => {
       setIndex(0);
     }
   };
-  useEffect(() => {
-    AOS.init({
-      delay: 170,
-      duration: 1000,
-    });
-    AOS.refresh();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     delay: 170,
+  //     duration: 1000,
+  //   });
+  //   AOS.refresh();
+  // }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       changeLang();

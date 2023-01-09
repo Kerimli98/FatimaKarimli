@@ -5,12 +5,12 @@ import Contact from "../components/Contact";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
       <About />
       <Slider />
       <Contact />
-    </div>
+    </>
   );
 };
 

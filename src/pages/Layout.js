@@ -1,13 +1,11 @@
-
 import ScrollToTop from "../components/ScrollToTop";
 import Routers from "../Routes/Routers";
+
 const Layout = () => {
   return (
-    <div>
+    <div className="sections">
       <ScrollToTop />
-      <div>
-        <Routers />
-      </div>
+      <Routers />
     </div>
   );
 };
