@@ -47,11 +47,7 @@ const About = () => {
             <span className="tags"> &lt;p&gt;</span>This is
             <span className="tags">&lt;&#47;p&gt;</span>
           </p>
-          <h1
-            className="about__name"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
+          <h1 className="about__name">
             <span className="tags"> &lt;h1&gt;</span>
             Fatima Karimli
             <span className="tags">&lt;&#47;h1&gt;</span>
@@ -61,18 +57,18 @@ const About = () => {
             <span className="tags">&lt;&#47;p&gt;</span>
           </p>
         </div>
-        <div
-          className="about__right"
-          data-aos="fade-left"
-          data-aos-duration="1000"
-        >
+        <div className="about__right">
           <p className="scewed-tag"> &lt;&#47;&gt;</p>
           <div className="outer-circle">
             <div className="circle1"></div>
             <div className="circle2"></div>
             <div className="circle3"></div>
             <div className="inner-circle"></div>
-            <a href="/temp" download className="green-text z-top">
+            <a
+              href="/assets/FatimaKarimli.pdf"
+              download
+              className="green-text z-top"
+            >
               &lt;Download CV&#47;&gt;
             </a>
           </div>

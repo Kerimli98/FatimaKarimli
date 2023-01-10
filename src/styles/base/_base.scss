@@ -35,6 +35,9 @@ ul,
 li {
   list-style: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   box-sizing: border-box;
@@ -42,8 +45,8 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-.App .sections {
-  scroll-behavior: smooth;
+
+.App {
   background-color: $color-main-bg;
 }
 .App::-webkit-scrollbar {
