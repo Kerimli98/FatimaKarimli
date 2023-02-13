@@ -1,11 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import projects from "../data";
+
 const PreviousBtn = (props) => {
   const { className, onClick } = props;
   return (
@@ -28,14 +27,9 @@ const NextBtn = (props) => {
   );
 };
 const ProjectsSlider = () => {
-  // useEffect(() => {
-  //   AOS.init({
-  //     delay: 170,
-  //   });
-  //   AOS.refresh();
-  // }, []);
   const [slideIndex, setSlideIndex] = useState(0);
   const [updateCount, setUpdateCount] = useState(0);
+  const numOfProjects = projects.length;
   const settings = {
     dots: false,
     prevArrow: <PreviousBtn />,
@@ -50,11 +44,7 @@ const ProjectsSlider = () => {
   const [animated, setAnimated] = useState(false);
   return (
     <div className="project-slider" id="portfolio">
-      <h2
-        className="project-slider__heading"
-        // data-aos="fade-up"
-        // data-aos-duration="1000"
-      >
+      <h2 className="project-slider__heading">
         <span className="tags positioned-top"> &lt;h2&gt;</span>
         My Portfolio
         <span className="tags positioned-bottom">&lt;&#47;h2&gt;</span>
@@ -71,8 +61,6 @@ const ProjectsSlider = () => {
         {projects.map((item) => (
           <div key={item.id} className="project-slide">
             <Link
-              // data-aos="zoom-in-right"
-              // data-aos-duration="500"
               to={`/projects/${item.title}`}
               className="img-container"
               onMouseEnter={() => setAnimated(() => true)}
@@ -88,11 +76,7 @@ const ProjectsSlider = () => {
               <div className={animated ? "circle animated4" : ""}></div>
             </Link>
 
-            <div
-              className="slide-content"
-              // data-aos="zoom-in-left"
-              // data-aos-duration="500"
-            >
+            <div className="slide-content">
               <Link to={`/projects/${item.title}`} className="slide-title">
                 {item.title}
               </Link>
@@ -104,7 +88,11 @@ const ProjectsSlider = () => {
       </Slider>
       <div className="progressbar">
         {[...Array(n)].map((elem, i) => (
-          <div key={i} className="progress"></div>
+          <div
+            key={i}
+            style={{ width: `${100 / numOfProjects}%` }}
+            className="progress"
+          ></div>
         ))}
       </div>
       <Link to="/projects" className="btn-slider">

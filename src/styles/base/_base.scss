@@ -41,11 +41,18 @@ html {
 
 body {
   box-sizing: border-box;
+  overscroll-behavior: none;
+  -ms-overflow-style: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body::-webkit-scrollbar {
   display: none;
 }
-
+.sections {
+  position: relative;
+}
 .App {
   background-color: $color-main-bg;
 }

@@ -4,6 +4,7 @@
   margin: 0 auto;
   flex-direction: column;
   padding: 5rem 0;
+  min-height: 100vh;
   position: relative;
 
   h3 {
@@ -16,6 +17,7 @@
   }
   .filter-btns {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 4rem;
     font-family: "Saira", sans-serif;
@@ -56,6 +58,7 @@
   .projects {
     display: grid;
     align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(39rem, max-content));
     gap: 5rem;
     margin-top: 5rem;

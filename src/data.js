@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: "01",
+    id: "0",
     title: "Bid Taxi",
     websitelink: "http:/bidtaxi.az/",
     languages: ["React", "CSS"],
@@ -31,9 +31,10 @@ const projects = [
     screenshot1: "/assets/images/bid.png",
     screenshot2: "/assets/images/bid2.png",
     screenshot3: "/assets/images/bid3.png",
+    delay: 0.2,
   },
   {
-    id: "02",
+    id: "1",
     title: "Naringi",
     websitelink: "http://naringi.az/",
     languages: ["React", "Redux", "SCSS", "CSS"],
@@ -78,9 +79,10 @@ const projects = [
     screenshot1: "/assets/images/naringi2.png",
     screenshot2: "/assets/images/naringi.png",
     screenshot3: "/assets/images/naringi3.png",
+    delay: 0.4,
   },
   {
-    id: "11",
+    id: "2",
     title: "Ecotourizm",
     websitelink: "https://www.greentravel.az/en",
 
@@ -116,9 +118,10 @@ const projects = [
     screenshot1: "/assets/images/greentravel2.png",
     screenshot2: "/assets/images/greentravel.png",
     screenshot3: "/assets/images/greentravel3.png",
+    delay: 0.6,
   },
   {
-    id: "03",
+    id: "3",
     title: "E-SAYAR",
     websitelink: "https://www.e-sayar.az/",
     languages: ["React", "SCSS"],
@@ -141,9 +144,10 @@ const projects = [
     screenshot1: "/assets/images/esayar2.png",
     screenshot2: "/assets/images/esayarr.png",
     screenshot3: "/assets/images/esayar3.png",
+    delay: 0.8,
   },
   {
-    id: "04",
+    id: "4",
     title: "Portfolio Website",
     websitelink: "https://fatimakarimli.netlify.app/",
     languages: ["React", "SCSS"],
@@ -165,10 +169,11 @@ const projects = [
     screenshot1: "/assets/images/portfolio2.png",
     screenshot2: "/assets/images/portfolio.png",
     screenshot3: "/assets/images/portfolio3.png",
+    delay: 1,
   },
 
   {
-    id: "05",
+    id: "5",
     title: "Eazy Pizz",
     websitelink: "https://eazypizz.netlify.app/home",
     languages: ["React", "Redux", "CSS", "Bootstrap"],
@@ -197,10 +202,11 @@ const projects = [
     screenshot1: "/assets/images/eazypizz2.png",
     screenshot2: "/assets/images/eazypizz.png",
     screenshot3: "/assets/images/eazypizz3.png",
+    delay: 1.2,
   },
 
   {
-    id: "06",
+    id: "6",
     title: "Natours",
     websitelink: "https://natours-go.netlify.app/",
     languages: ["HTML", "SCSS"],
@@ -227,9 +233,10 @@ const projects = [
     screenshot1: "/assets/images/natours2.png",
     screenshot2: "/assets/images/natours.png",
     screenshot3: "/assets/images/natours3.png",
+    delay: 1.4,
   },
   {
-    id: "07",
+    id: "7",
     title: "Nexter",
     websitelink: "https://nexter-go.netlify.app/",
     languages: ["HTML", "SCSS"],
@@ -256,9 +263,10 @@ const projects = [
     screenshot1: "/assets/images/nexter2.png",
     screenshot2: "/assets/images/nexter.png",
     screenshot3: "/assets/images/nexter3.png",
+    delay: 1.6,
   },
   {
-    id: "08",
+    id: "8",
     title: "Trillo",
     websitelink: "https://trillo-go.netlify.app/",
     languages: ["HTML", "SCSS"],
@@ -285,10 +293,11 @@ const projects = [
     screenshot1: "/assets/images/trillo2.png",
     screenshot2: "/assets/images/trillo.png",
     screenshot3: "/assets/images/trillo3.png",
+    delay: 1.8,
   },
 
   {
-    id: "09",
+    id: "9",
     title: "Selnet",
     websitelink: "https://selnet.az/",
 
@@ -313,6 +322,7 @@ const projects = [
     screenshot1: "/assets/images/selnet2.png",
     screenshot2: "/assets/images/selnet.png",
     screenshot3: "/assets/images/selnet3.png",
+    delay: 2,
   },
 
   {
@@ -339,6 +349,33 @@ const projects = [
     screenshot1: "/assets/images/currency.png",
     screenshot2: "/assets/images/currency.png",
     screenshot3: "/assets/images/currency.png",
+    delay: 2.2,
+  },
+  {
+    id: "11",
+    title: "Icon Group",
+    websitelink: "",
+
+    languages: ["React", "CSS"],
+    desc: "Simple currency converter. It works for available currencies ",
+    langDetails: [
+      "Built by ReactJS and CSS",
+      "Connects to the free currency API server via HTTP",
+    ],
+    goal: [
+      {
+        id: 1,
+        goalName: "Currency Converter",
+        goalDesc:
+          "Simple currency converter. It works for available currencies by connecting to a free currency api via HTTP",
+      },
+    ],
+    challanges: "",
+    solution: "",
+    screenshot1: "/assets/images/currency.png",
+    screenshot2: "/assets/images/currency.png",
+    screenshot3: "/assets/images/currency.png",
+    delay: 2.4,
   },
 ];
 export default projects;

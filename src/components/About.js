@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const About = () => {
@@ -15,10 +14,9 @@ const About = () => {
       setEnd(latest);
     });
   }, []);
-  console.log(end);
   return (
     <section className="about">
-      {end > 0 ? (
+      {/* {end > 0 ? (
         <a href="#about">
           <div className="start">
             <span>About</span>
@@ -26,7 +24,7 @@ const About = () => {
         </a>
       ) : null}
       <motion.div className="progress-bar" style={{ scaleY: scaleX }} />
-      {end > 0.4 ? (
+      {end > 0.09 ? (
         <a href="#portfolio">
           <div className="middle">
             <span>Portfolio</span>
@@ -39,25 +37,45 @@ const About = () => {
             <span>Contact</span>
           </div>
         </a>
-      ) : null}
+      ) : null} */}
 
       <div className="about__container" id="about">
         <div className="about__left">
-          <p className="green-text mt">
+          <motion.p
+            initial={{ opacity: 0, y: 70 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0, duration: 0.7 }}
+            className="green-text mt"
+          >
             <span className="tags"> &lt;p&gt;</span>This is
             <span className="tags">&lt;&#47;p&gt;</span>
-          </p>
-          <h1 className="about__name">
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 70 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="about__name"
+          >
             <span className="tags"> &lt;h1&gt;</span>
             Fatima Karimli
             <span className="tags">&lt;&#47;h1&gt;</span>
-          </h1>
-          <p className="green-text mt">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 70 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.7 }}
+            className="green-text mt"
+          >
             <span className="tags"> &lt;p&gt;</span>Front-end developer
             <span className="tags">&lt;&#47;p&gt;</span>
-          </p>
+          </motion.p>
         </div>
-        <div className="about__right">
+        <motion.div
+          initial={{ opacity: 0, x: 170 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
+          className="about__right"
+        >
           <p className="scewed-tag"> &lt;&#47;&gt;</p>
           <div className="outer-circle">
             <div className="circle1"></div>
@@ -72,7 +90,7 @@ const About = () => {
               &lt;Download CV&#47;&gt;
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

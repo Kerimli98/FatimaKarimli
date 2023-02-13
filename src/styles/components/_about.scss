@@ -16,20 +16,21 @@
     height: 0.7rem;
     background-color: $color-white;
     border-radius: 50%;
-    box-shadow: 0 0 5px 5px $color-green-light;
-    left: 1.7rem;
+    box-shadow: 0 0 3px 3px $color-green-light;
+    left: 0.74rem;
 
     span {
       color: white;
       text-decoration: none;
-      margin-left: 2rem;
+      margin-left: 1.5rem;
+      font-size: 1.4rem;
     }
   }
   .start {
     top: 10%;
   }
   .middle {
-    top: 47.5%;
+    top: 17.5%;
   }
   .end {
     bottom: 10%;
@@ -37,9 +38,9 @@
   .progress-bar {
     position: fixed;
     top: 10.8%;
-    left: 2rem;
+    left: 1rem;
     bottom: 10.8%;
-    width: 2px;
+    width: 1px;
     background: $color-green-light;
     transform-origin: 0% 0%;
   }
@@ -80,7 +81,7 @@
       transform: rotate(-52deg) skew(20deg, 7deg);
       display: inline-block;
       opacity: 0.6;
-      z-index: -5;
+      z-index: 0;
       position: absolute;
     }
     .outer-circle {
