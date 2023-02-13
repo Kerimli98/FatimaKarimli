@@ -143,6 +143,29 @@ const projects = [
     screenshot3: "/assets/images/esayar3.png",
   },
   {
+    id: "12",
+    title: "Icon Group",
+    websitelink: "https://icongroup.az/",
+    languages: ["Next", "Typescript", "SCSS"],
+    langDetails: [
+      "Done in Next.JS, as fully stand-alone frontend application",
+      "Responsive web design",
+    ],
+    desc: "Company website for Icon Group which helps users to get information and contact with the company",
+    goal: [
+      {
+        id: 1,
+        goalName: "",
+        goalDesc: "",
+      },
+    ],
+    challanges: "",
+    solution: "",
+    screenshot1: "/assets/images/icongroup.png",
+    screenshot2: "/assets/images/icongroup.png",
+    screenshot3: "/assets/images/icongroup.png",
+  },
+  {
     id: "04",
     title: "Portfolio Website",
     websitelink: "https://fatimakarimli.netlify.app/",
